@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main2.css">
+    <!--    <link rel="stylesheet" type="text/css" href="https://ianlunn.github.io/Hover/css/hover.css">-->
+    <link rel="stylesheet" href="static/bootstrap.min.css">
+    <link rel="stylesheet" href="static/timeline.css">
+    <script src="static/jquery-3.4.1.js"></script>
+    <script src="static/popper-2.1.0.js"></script>
+    <script src="static/main.js"></script>
+    <link rel="shortcut icon" href="favicon2.ico"/>
+    <title>Vincent's Blog</title>
+</head>
+<body onload="background()">
+<header>
+    <ul>
+        <a href="#background"><li class="header-bar">Home</li></a>
+        <a href="https://allenliux01.wixsite.com/mrvs"><li class="header-bar">Music</li></a>
+        <a href="#proj"><li class="header-bar">Projects</li></a>
+        <a href="http://www.vincentliux.com/articles/"><li class="header-bar">Articles</li></a>
+        <a href="https://github.com/AllenLiuX"><img class="header-icon" src="https://cdn3.iconfinder.com/data/icons/popular-services-brands/512/github-512.png" width="30"></a>
+        <a href="https://space.bilibili.com/26205291"><img class="header-icon" src="images/bilibili.png" width="25"></a>
+        <a href="https://www.youtube.com/channel/UC7FCasNsi5u5QnmuiAawRjg?view_as=subscriber"><img class="header-icon" src="images/youtube.png" width="30"></a>
+    </ul>
+</header>
+<main>
+    <section class="list-item">
+        <div class="item-image">
+            <img id="background" src="images/back2.JPG">
+        </div>
+        <div class="item-text">
+            <div class="item-title">Welcome to Vincent's Blog!</div>
+            <div class="item-desc">You'll see my experience, projects, and skill sets below &darr;</div>
+        </div>
+    </section>
+    <!--    <label class="contact">Contact Me</label>-->
+    <section class="content">
+        <div id="portrait_out"><img id="portrait" src="images/portrait2.JPG" width="250px"></div>
+        <h1 class="content-title">About Me</h1>
+        <p class="content-text">Hi! This is <b>Wenxuan Liu</b>, aka <b>Vincent</b>, a 2022’ Computer Science major undergraduate at UCLA.
+            <br>For now, my technical concentrations are <b>computer algorithms</b>, <b>web development</b>, <b>ASR</b>, and <b>data analysis</b>.
+        </p><br>
+        <hr/>
+        <h1 class="content-title" id="skills">Skill Sets</h1>
+        <div class="container2">
+            <div class="content2">
+                <div class="col2">
+                    <ul id="skill2">
+                        <li><span class="expand html5"></span><em>Python: 90%</em></li>
+                        <li><span class="expand css3"></span><em>C & C++: 70%</em></li>
+                        <li><span class="expand jquery"></span><em>NumPy, Pandas, MatplotLib: 60%</em></li>
+                        <li><span class="expand photoshop"></span><em>JavaScript: 80%</em></li>
+                        <li><span class="expand dreamweaver"></span><em>Database and SQL: 40%</em></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content3">
+                <div class="col2">
+                    <ul id="skill2">
+                        <li><span class="expand s1"></span><em>HTML, CSS, JQuery, PHP: 80%</em></li>
+                        <li><span class="expand s2"></span><em>Docker: 50%</em></li>
+                        <li><span class="expand s3"></span><em>Swift: 40%</em></li>
+                        <li><span class="expand s4"></span><em>Linux, Bash, GIT: 60%</em></li>
+                        <li><span class="expand s5"></span><em>Django: 70%</em></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <hr/>
+        <h1 class="content-title" id="proj">Projects</h1>
+        <br>
+        <section class="timeline">
+            <div class="container">
+                <div class="timeline-item">
+                    <div class="timeline-img"></div>
+                    <div class="timeline-content timeline-card js--fadeInRight">
+                        <div class="timeline-img-header" id="asr">
+                            <h2>Manderin ASR Research</h2>
+                        </div>
+                        <div class="date">Aug 2019 - Now</div>
+                        <p>
+                            <b>Training</b><br>This is my long-term research based on Kaldi. My environment is Linux Ubuntu16.04, and I've trained my own tr1b-tr3b models based on THCHS30 and deployed online-test based on Voxforge. Now I'm training models based on aidatatang.
+                            <br><b>Service</b><br>I utilized Aidatatang's open source acoustic model to construct a ASR Service with accuracy higher than 90%. I also examined the functionalities of CVTE and DFSMN.
+                            <br><b>Original tools</b><br>I wrote corresponding sound format translator bash based on Sox, and I wrote a python script to automatically execute the run.sh procedule and format the recognition result into database with SQlite, as well as a python script to adjust the language model with given words for specific scenario.
+                        </p>
+                        <a class="bnt-more" href="http://www.vincentliux.com/articles/Technicals/ASR-Research-Summary.html">More</a>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-img"></div>
+                    <div class="timeline-content timeline-card js--fadeInRight">
+                        <div class="timeline-img-header" id="vs">
+                            <h2>Virtual Shelf</h2>
+                        </div>
+                        <div class="date">Mar 27 - 29 2020</div>
+                        <p>In cope of COVID-19, we built a website with Django for searching stores’ storage with searchable stores and objects, teammates @Boyuan Ma, Stefan Li, Rui Deng.
+                            <br><b>Personal Implementations</b><br> Designed and constructed the Django framework between frontend and database, implemented Search-Suggest JS, and made most HTML&CSS design and programming.
+                        </p>
+                        <a class="bnt-more" href="https://github.com/AllenLiuX/Virtual-Shelf-Website">More</a>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-img"></div>
+                    <div class="timeline-content timeline-card js--fadeInRight">
+                        <div class="timeline-img-header" id="c">
+                            <h2 id="black">C Projects</h2>
+                        </div>
+                        <div class="date">Jan - Jun 2020</div>
+                        <p>
+                            <b>Multithreading Lock</b>
+                            <br>A multithreaded program that inserts some nodes to a list and delete these nodes from the list(also does so on Linkedlist), and use Gnuplot to automatic generate graphs for comparing the performances of Spin lock, Mutex lock, and partitioned list.
+                            <br><b>Compressed TCP Socket Communication</b>
+                            <br>Consists of host and server. Client sends stdin command to server, and receive output from server. Server takes input from client with corresponding port, and direct it to shell to execute the command, and then send the output to the client. compression is also implemented.
+                            <br><b>File System Fundamental Manipulation</b>
+                            <br>Input an EXT2 FS and image, show all the information about the file system's superblock, group, inode, directory, and so on into a csv format output. Also wrote an python program to do audit of file system consistency analysis, input is .csv and output is error message. Teammate @Yaqi Zhan.
+                            <br><b>Big Project: TCP implementation on UDP by Socket</b>
+                            <br>Implemented reliable pipeline file transfer on UDP socket with given IP and port between server and client, based on SYN handshakings, G-Back-N ACK protocol, FIN handshaking, etc.
+                        </p>
+                        <a class="bnt-more" href="https://github.com/AllenLiuX/UCLA-CS-111">More</a>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-img"></div>
+                    <div class="timeline-content timeline-card js--fadeInLeft">
+                        <div class="timeline-img-header" id="python">
+                            <h2>Python Projects</h2>
+                        </div>
+                        <div class="date">Oct 2019 - Now</div>
+                        <p>
+                            <b>Language processing</b>
+                            <br>Using NLTK, NumPy, and Regular Express to analysis the 'happiness index' of given sentences or paragraphs.
+                            <br><b>Image Processing</b>
+                            <br>Wrote programs with Matplotlib and NumPy to automatically add frames, find differences, or process images with green background. Also wrote mathematical functions for adding or relieving Gaussian noise.
+                            <br><b>Spinning cubes - TKinter</b>
+                            <br>Inspired by an intellectual TV show 最强大脑, I wrote the game spinning cubes that people may rotate each four cubes and make colors be in target positions.
+                            <br><b>Others</b>
+                            <br>Many little projects including web crawler, automatic txt-to-sound reader, and hundreds of Leetcode programming, etc.
+                        </p>
+                        <a class="bnt-more" href="https://github.com/AllenLiuX/Application-of-Python-UCLA-PIC16">More</a>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-img"></div>
+                    <div class="timeline-content timeline-card js--fadeInLeft">
+                        <div class="timeline-img-header" id="maze">
+                            <h2>Mario Maze(3D WebGL)</h2>
+                        </div>
+                        <div class="date">Oct - Dec 2019</div>
+                        <p>This game let people use keystrokes to walk and jump in a 3D maze, find keys, open gates, and find the exit. When exploring in the maze, the player will meet moving monsters and obstacles which could possibly wound player. Teammates @Yuan Shen, Ziyan Wang.
+                            <br><b>Personal Implementations</b><br> Programmed the animation for obstacles based on 3D coordinates translations, wrote scenes arrangements and keys detections, drew and implemented the UI interfaces, collected and implemented obj models, made sound effects.
+                        </p>
+                        <a class="bnt-more" href="http://www.vincentliux.com/maze/">Play Now</a>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-img"></div>
+                    <div class="timeline-content timeline-card js--fadeInRight">
+                        <div class="timeline-img-header" id="cpp">
+                            <h2>C++ Projects</h2>
+                        </div>
+                        <div class="date">Jan - Mar 2019</div>
+                        <p><b>Genome Matcher</b><br>A Genome searching tool that searches through genomes and categorizes DNA sequences, based on algorithms and STLs.
+                        <p><b>Zombie Dash</b><br>A 2D game that hunt zombie, save citizen, set trap, and find exit. Implementing polymorphism and edge detection.
+                        </p>
+                        <a class="bnt-more" href="javascript:void(0)">More</a>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-img"></div>
+                    <div class="timeline-content timeline-card js--fadeInLeft">
+                        <div class="timeline-img-header" id="ios">
+                            <h2>IOS Apps</h2>
+                        </div>
+                        <div class="date">Jul 2018 - 2019</div>
+                        <p><b>Object Classifier(CoreML)</b> <br>Take or upload photo and returns the result and probability of what the object might be.
+                            <br><b>AR Dice & AR Pokemon</b> <br>Use Unity modeling, movement designs and built-in AR models to roll a dice or simulate pokemon.
+                            <br><b>Precise Weather</b> <br>Use Json and API to access precise weather data by using current location or location search.
+                            <br><b>Happi</b> <br>A social media for idea collection with interface design and database on Google Firebase, developed with Rui Deng.
+                            <br><b>Other Apps</b><br>Quick Quiz App, Keyboard Music App, Chat App demo, etc.
+                        </p>
+                        <a class="bnt-more" href="https://github.com/AllenLiuX/Image-Classifier-App">More</a>
+                    </div>
+                </div>
+
+
+                <div class="timeline-item">
+                    <div class="timeline-img"></div>
+                    <div class="timeline-content js--fadeInLeft">
+                        <!--                                <div class="date">Now</div>-->
+                        <h2>UNDER DEVELOPMENT</h2>
+                        <blockquote>
+                            <ul>
+                                <li>Machine Learning Study (Pytorch)</li>
+                                <li>ASR Application Development (manderin ASR - to business)</li>
+                                <!--                                        <li></li>-->
+                            </ul>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br><br><br><br><br><br>
+        <hr/>
+        <h1 class="content-title" id="art">Articles</h1>
+        <ul id="artlist">
+            <a href="http://www.vincentliux.com/articles/Technicals/Python-Notes.html"><li>Python Notes</li></a>
+            <a href="http://www.vincentliux.com/articles/Technicals/CS111-OS-Notes.html"><li>Operating System Notes</li></a>
+            <a href="http://www.vincentliux.com/articles/Technicals/HTML-Notes.html"><li>HTML Notes</li></a>
+            <a href="http://www.vincentliux.com/articles/Technicals/ASR-Research-Summary.html"><li>ASR Reseach Summary</li></a>
+            <a href="http://www.vincentliux.com/articles/"><li>More...</li></a>
+        </ul>
+        <!--        <hr/>-->
+        <!--            <hr/>-->
+        <!--            <h1 class="content-title">Experience</h1>-->
+        <!--            <div class="exp">-->
+        <!--              <div class = 'item'>-->
+        <!--                  <a href=""><img id = exp-pic src="images/sdsz.jpg" /></a>-->
+        <!--                  <div class = "description">High School Education</div>-->
+        <!--                  <div class = "description2">2015 - 2018</div>-->
+        <!--              </div>-->
+        <!--              <div class = 'item'>-->
+        <!--                  <a href=""><img id = exp-pic src="images/ucla.jpeg" /></a>-->
+        <!--                  <div class = "description">CS undergraduate</div>-->
+        <!--                  <div class = "description2">2018 - 2022</div>-->
+        <!--              </div>-->
+        <!--              <div class = 'item'>-->
+        <!--                  <a href=""><img id = exp-pic src="images/un.png" /></a>-->
+        <!--    &lt;!&ndash;              <div class = "description">United Nations UNIS Conference @Headquarter</div>&ndash;&gt;-->
+        <!--                  <div class = "description">Guest Speaker</div>-->
+        <!--                  <div class = "description2">Mar 2016</div>-->
+        <!--              </div>-->
+        <!--              <div class = 'item'>-->
+        <!--                  <a href=""><img id = exp-pic src="images/CMB.png" /></a>-->
+        <!--                  <div class = "description">Data Analyst</div>-->
+        <!--                  <div class = "description2">Seq 2017</div>-->
+        <!--              </div>-->
+        <!--                <div class = 'item'>-->
+        <!--                  <a href=""><img id = pio-pic src="images/pioneer.png" /></a>-->
+        <!--                  <div class = "description">Financial Data<br> Researcher</div>-->
+        <!--                  <div class = "description2">Jun - Oct 2017</div>-->
+        <!--              </div>-->
+        <!--              <div class = 'item'>-->
+        <!--                  <a href=""><img id = exp-pic src="images/welljoint.png@!f_200x200" /></a>-->
+        <!--                  <div class = "description">ASR Team Leader</div>-->
+        <!--                  <div class = "description2">2019-2020</div>-->
+        <!--              </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
+    </section>
+</main>
+<footer>
+    <div class="container">
+        <p class="m-0 text-center text-black-50">@Vincent's Blog 2020. Author: Wenxuan Liu(Vincent). Powered by HTML&CSS&JS with JQuery, Apache Ubuntu server</p>
+        <p class="m-0 text-center text-black-50">Contact: allenliux01@163.com Wechat: 1747964236 Ins:allenliux01</p>
+    </div>
+</footer>
+</body>
+</html>
