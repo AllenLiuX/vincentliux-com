@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="static/timeline.css">
     <script src="static/jquery-3.4.1.js"></script>
     <script src="static/popper-2.1.0.js"></script>
-    <script src="static/main.js"></script>
+    <script src="main.js"></script>
     <link rel="shortcut icon" href="favicon2.ico"/>
     <title>Vincent's Blog</title>
 </head>
@@ -36,6 +36,16 @@
     </section>
     <!--    <label class="contact">Contact Me</label>-->
     <section class="content">
+<!--        <div class="switch">-->
+<!--            <input id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round" type="checkbox">-->
+<!--            <label for="cmn-toggle-1"></label>-->
+<!--        </div>-->
+        <label id="dark">Dark Mode</label>
+        <div class="switch">
+            <input id="cmn-toggle-4" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
+            <label for="cmn-toggle-4"></label>
+        </div>
+
         <div id="portrait_out"><img id="portrait" src="images/portrait2.JPG" width="250px"></div>
         <h1 class="content-title">About Me</h1>
         <p class="content-text">Hi! This is <b>Wenxuan Liu</b>, aka <b>Vincent</b>, a 2022’ Computer Science major undergraduate at UCLA.
@@ -96,7 +106,7 @@
                             <h2>Virtual Shelf</h2>
                         </div>
                         <div class="date">Mar 27 - 29 2020</div>
-                        <p>In cope of COVID-19, we built a website with Django for searching stores’ storage with searchable stores and objects, teammates @Boyuan Ma, Stefan Li, Rui Deng.
+                        <p><b>Description</b><br>In cope of COVID-19, we built a website with Django for searching stores’ storage with searchable stores and objects, teammates @Boyuan Ma, Stefan Li, Rui Deng.
                             <br><b>Personal Implementations</b><br> Designed and constructed the Django framework between frontend and database, implemented Search-Suggest JS, and made most HTML&CSS design and programming.
                         </p>
                         <a class="bnt-more" href="https://github.com/AllenLiuX/Virtual-Shelf-Website">More</a>
@@ -152,7 +162,8 @@
                             <h2>Mario Maze(3D WebGL)</h2>
                         </div>
                         <div class="date">Oct - Dec 2019</div>
-                        <p>This game let people use keystrokes to walk and jump in a 3D maze, find keys, open gates, and find the exit. When exploring in the maze, the player will meet moving monsters and obstacles which could possibly wound player. Teammates @Yuan Shen, Ziyan Wang.
+                        <p>
+                            <b>Description</b><br>This game let people use keystrokes to walk and jump in a 3D maze, find keys, open gates, and find the exit. When exploring in the maze, the player will meet moving monsters and obstacles which could possibly wound player. Teammates @Yuan Shen, Ziyan Wang.
                             <br><b>Personal Implementations</b><br> Programmed the animation for obstacles based on 3D coordinates translations, wrote scenes arrangements and keys detections, drew and implemented the UI interfaces, collected and implemented obj models, made sound effects.
                         </p>
                         <a class="bnt-more" href="http://www.vincentliux.com/maze/">Play Now</a>
@@ -257,9 +268,9 @@
     </section>
 </main>
 <footer>
-    <div class="container">
-        <p class="m-0 text-center text-black-50">@Vincent's Blog 2020. Author: Wenxuan Liu(Vincent). Powered by HTML&CSS&JS with JQuery, Apache Ubuntu server</p>
-        <p class="m-0 text-center text-black-50">Contact: allenliux01@163.com Wechat: 1747964236 Ins:allenliux01</p>
+    <div class="container" id="foot-cont">
+        <p id='foo' class="m-0 text-center text-black-50">@Vincent's Blog 2020. Author: Wenxuan Liu(Vincent). Powered by HTML&CSS&JS with JQuery, Apache Ubuntu server</p>
+        <p id='foo2' class="m-0 text-center text-black-50">Contact: allenliux01@163.com Wechat: 1747964236 Ins:allenliux01</p>
     </div>
 </footer>
 </body>
