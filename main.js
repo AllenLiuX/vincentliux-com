@@ -22,8 +22,9 @@ function opt(){
         $(".content2").css('color','#ffffff');
         $(".content3").css('color','#ffffff');
         $(".content-text b").css('color','#af7a00');
-        $(".expand").css('background','#bf7b00');
-        $('.expand').css('box-shadow','0px 0px 6px 1.5px rgba(200,150,0,0.6)');
+        $(".expand").css('background','#dfab00');
+        $('.expand').css('box-shadow','0px 0px 6px 1.5px rgba(200,150,0,0.7)');
+        $('#skill2 li').css('background', '#333333');
         $('.content-title').css('color', '#ffffff');
         $(".timeline-content").css('background','#000000');
         $(".timeline-item").css('color','#ffffff');
@@ -33,9 +34,10 @@ function opt(){
         $("#artlist a").css('color','#ffffff');
         $('#foo').attr('class', 'm-0 text-center text-white-50');
         $('#foo2').attr('class', 'm-0 text-center text-white-50');
+        // $('#foo').text('@Vincent\'s Blog 2020. Author: Wenxuan Liu(Vincent). Dark Mode Design: Sofia Ni. Powered by HTML&CSS&JS with JQuery, Apache Ubuntu server');
     }
     else{
-        $("#dark").css('color','#5f20b5');
+        $("#dark").css('color','#2D93CA');
         $(".content").css('background', 'linear-gradient(45deg, #cfedef 60%, #ffffff)');
         $(".content-text").css('color','#000000');
         $(".content2").css('color','#000000');
@@ -43,6 +45,7 @@ function opt(){
         $(".content-text b").css('color','#3f51b5');
         $(".expand").css('background','#ff4081');
         $('.expand').css('box-shadow','0px 0px 6px 1.5px rgba(230,0,0,0.6)');
+        $('#skill2 li').css('background', '#9fcdff');
         $('.content-title').css('color', '#2D93CA');
         $(".timeline-content").css('background','#ffffff');
         $(".timeline-item").css('color','#000000');
