@@ -1,11 +1,38 @@
 let i = 0;
 let j = 500;
 let direction = -1;
+let bili_source = [
+    '//player.bilibili.com/player.html?aid=87701378&cid=149827087&page=1',
+    "//player.bilibili.com/player.html?aid=287268542&bvid=BV1Rf4y1D7d8&cid=243249542&page=1",
+    '//player.bilibili.com/player.html?aid=93314844&bvid=BV1eE41177Nf&cid=159313677&page=1',
+    '//player.bilibili.com/player.html?aid=16819730&bvid=BV1zW411a7ai&cid=27480277&page=1',
+    '//player.bilibili.com/player.html?aid=12524615&bvid=BV1wx411q7rn&cid=20610361&page=1',
+    '//player.bilibili.com/player.html?aid=414912732&bvid=BV18V41127Vk&cid=246816167&page=1'
+]
+
 
 function background(){
     // changeId = setInterval(change, 3000);   //check the options every 3 second
     optId = setInterval(opt, 4);
-    // $("#background").attr('src', 'images/back.JPG');
+    var img = document.getElementsByClassName('bili-images');
+    $('.bili-images')[0].onclick = function(){
+        $('.bili').attr('src', bili_source[0]);
+    };
+    $('.bili-images')[1].onclick = function(){
+        $('#bili').attr('src', bili_source[1]);
+    };
+    $('.bili-images')[2].onclick = function(){
+        $('#bili').attr('src', bili_source[2]);
+    };
+    $('.bili-images')[3].onclick = function(){
+        $('#bili').attr('src', bili_source[3]);
+    };
+    $('.bili-images')[4].onclick = function(){
+        $('#bili').attr('src', bili_source[4]);
+    };
+    $('.bili-images')[5].onclick = function(){
+        $('#bili').attr('src', bili_source[5]);
+    };
 }
 
 // function change(){
@@ -125,20 +152,20 @@ $(function () {
 });
 
 
-$("#cmn-toggle-4").click(function () {
-    if ($(this).prop("checked")) {//jquery 1.6以前版本 用  $(this).attr("checked")
-        alert("选中");
-        $(".content").css('background', 'linear-gradient(45deg, #000000 80%, #7a4a00)');
-    } else {
-        alert("没有选中");
-    }
-});
-
-$("#ch1").click(function () {
-    if ($(this).prop("checked")) {//jquery 1.6以前版本 用  $(this).attr("checked")
-        $(".content").css('background', 'linear-gradient(45deg, #000000 80%, #7a4a00)');
-        alert("选中");
-    } else {
-        alert("没有选中");
-    }
-});
+// $("#cmn-toggle-4").click(function () {
+//     if ($(this).prop("checked")) {//jquery 1.6以前版本 用  $(this).attr("checked")
+//         alert("选中");
+//         $(".content").css('background', 'linear-gradient(45deg, #000000 80%, #7a4a00)');
+//     } else {
+//         alert("没有选中");
+//     }
+// });
+//
+// $("#ch1").click(function () {
+//     if ($(this).prop("checked")) {//jquery 1.6以前版本 用  $(this).attr("checked")
+//         $(".content").css('background', 'linear-gradient(45deg, #000000 80%, #7a4a00)');
+//         alert("选中");
+//     } else {
+//         alert("没有选中");
+//     }
+// });

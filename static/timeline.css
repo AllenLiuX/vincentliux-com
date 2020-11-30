@@ -178,6 +178,21 @@ body {
   background-position: center 0;
 }
 
+#search-engine{
+  background: url("../images/se.png") center center no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-position: center 0;
+}
+
+#ml{
+  background: url("../images/ml.png") center center no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-position: center 0;
+}
 
 .timeline-img-header {
   height: 200px;

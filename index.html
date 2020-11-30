@@ -49,30 +49,32 @@
         <div id="portrait_out"><img id="portrait" src="images/portrait2.JPG" width="250px"></div>
         <h1 class="content-title">About Me</h1>
         <p class="content-text">Hi! This is <b>Wenxuan Liu</b>, aka <b>Vincent</b>, a 2022’ Computer Science major undergraduate at UCLA.
-            <br>For now, my technical concentrations are <b>computer algorithms</b>, <b>web development</b>, <b>ASR</b>, and <b>data analysis</b>.
+            <br>For now, my technical concentrations are <b>computer algorithms</b>, <b>web development</b>, <b>ASR</b>, <b>data analysis</b>, and <b>machine learning</b>.
         </p><br>
         <hr/>
         <h1 class="content-title" id="skills">Skill Sets</h1>
         <div class="container2">
             <div class="content2">
                 <div class="col2">
+                    <p style="margin-left: 40%">Backend</p>
                     <ul id="skill2">
                         <li><span class="expand html5"></span><em>Python: 90%</em></li>
                         <li><span class="expand css3"></span><em>C & C++: 70%</em></li>
-                        <li><span class="expand jquery"></span><em>Data Processing (NumPy + Pandas + MatplotLib): 60%</em></li>
-                        <li><span class="expand photoshop"></span><em>JavaScript: 80%</em></li>
-                        <li><span class="expand dreamweaver"></span><em>Database and SQL: 40%</em></li>
+                        <li><span class="expand jquery"></span><em>Data Processing (NumPy + Pandas + MatplotLib): 80%</em></li>
+                        <li><span class="expand s4"></span><em>Linux (Bash Script + GIT + Apache/Nginx, etc.): 75%</em></li>
+                        <li><span class="expand s5"></span><em>Machine Learning(Keras + Sklearn): 70%</em></li>
                     </ul>
                 </div>
             </div>
             <div class="content3">
                 <div class="col2">
+                    <p style="margin-left: 40%">Frontend</p>
                     <ul id="skill2">
                         <li><span class="expand s1"></span><em>HTML + CSS + JQuery + PHP: 80%</em></li>
+                        <li><span class="expand photoshop"></span><em>JavaScript + Flask + Django + React: 50%</em></li>
+                        <li><span class="expand dreamweaver"></span><em>MongoDB and MySQL: 60%</em></li>
                         <li><span class="expand s2"></span><em>Docker: 50%</em></li>
                         <li><span class="expand s3"></span><em>Swift: 40%</em></li>
-                        <li><span class="expand s4"></span><em>Linux (Bash + GIT + Regex, etc.): 60%</em></li>
-                        <li><span class="expand s5"></span><em>Django: 70%</em></li>
                     </ul>
                 </div>
             </div>
@@ -89,13 +91,45 @@
                         <div class="timeline-img-header" id="asr">
                             <h2>Manderin ASR Research</h2>
                         </div>
-                        <div class="date">Aug 2019 - Now</div>
+                        <div class="date">Aug 2019 - Sep 2020</div>
                         <p>
                             <b>Training</b><br>This is my long-term research based on Kaldi. My environment is Linux Ubuntu16.04, and I've trained my own tr1b-tr3b models based on THCHS30 and deployed online-test based on Voxforge. Now I'm training models based on aidatatang.
                             <br><b>Service</b><br>I utilized Aidatatang's open source acoustic model to construct a ASR Service with accuracy higher than 90%. I also examined the functionalities of CVTE and DFSMN.
                             <br><b>Original tools</b><br>I wrote corresponding sound format translator bash based on Sox, and I wrote a python script to automatically execute the run.sh procedule and format the recognition result into database with SQlite, as well as a python script to adjust the language model with given words for specific scenario.
                         </p>
                         <a class="bnt-more" href="http://www.vincentliux.com/articles/Technicals/ASR-Research-Summary.html">More</a>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-img"></div>
+                    <div class="timeline-content timeline-card js--fadeInRight">
+                        <div class="timeline-img-header" id="search-engine">
+                            <h2>Financial Reports Search Engine</h2>
+                        </div>
+                        <div class="date">Aug 2020 - Now</div>
+                        <p>
+                            <b>Backend</b><br>Co-designed the structure and pattern of the financial search engine, implemented the processing, storing, and extraction of structured data of articles oriented by companies scraped from more than 20 financial report websites on MongoDB on AWS, wrote flask API for communication between backend and frontend, implemented translation from html to pdf and upload of downloaded pdf on OSS.
+                            <br><b>Scrapers</b><br>Implemented web scrapers to scrape the financial reports on many financial websites given specific keywords, number of pages, time range, sorting type and so on  and automatically generate summary of content and information as well as the link to the articles and store in the database.
+                            <br><b>Machine Learning Tagging</b><br>Use supervised learning algorithm and clustering for the classification of articles in our database. Algorithm is under development.
+                        </p>
+                        <a class="bnt-more" href="">More</a>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-img"></div>
+                    <div class="timeline-content timeline-card js--fadeInRight">
+                        <div class="timeline-img-header" id="ml">
+                            <h2 id="black">Machine Learning Projects</h2>
+                        </div>
+                        <div class="date">Aug 2020 - Now</div>
+                        <p>
+                            <b>Financial data classification</b><br>Utilized tokenization of abstracts of each transaction on company's detailed bills and the matching of certain keywords as well as the amount of inflow and outflow money to classify the type of transaction based on Deep Learning algorithm composed of RNN, Dense, and dropout layers.
+                            <br><b>Covid 19 Prediction</b><br>Utilized John Hopkins University's open source data of COVID-19 to implemented a Deep Learning Model with LSTM for the prediction of future confirmed and death cases at each states in United States.
+                            <br><b>Other projects</b><br>Implemented Decision tree, KNN, SVM, Neural Network, K-means and DB-Scan clustering from scratch and made mathematical applications.
+                        </p>
+                        <a class="bnt-more" href="">More</a>
                     </div>
                 </div>
 
@@ -177,8 +211,10 @@
                             <h2>C++ Projects</h2>
                         </div>
                         <div class="date">Jan - Mar 2019</div>
-                        <p><b>Genome Matcher</b><br>A Genome searching tool that searches through genomes and categorizes DNA sequences, based on algorithms and STLs.
-                        <p><b>Zombie Dash</b><br>A 2D game that hunt zombie, save citizen, set trap, and find exit. Implementing polymorphism and edge detection.
+                        <p>
+                            <b>Genome Matcher</b><br>A Genome searching tool that searches through genomes and categorizes DNA sequences, based on algorithms and STLs.
+                            <b>Zombie Dash</b><br>A 2D game that hunt zombie, save citizen, set trap, and find exit. Implementing polymorphism and edge detection.
+                            <b>Leetcode Problems in C++</b><br>Implemented algorithms and STLs to solve 150+ classic algorithm problems on Leetcode.
                         </p>
                         <a class="bnt-more" href="javascript:void(0)">More</a>
                     </div>
@@ -231,6 +267,28 @@
             <a href="http://www.vincentliux.com/articles/Thoughts/Positive%20Subjectivity%20-%20A%20Guide%20to%20a%20Meaningful%20Life.pdf"><li>Positive Subjectivity - A Guide to a Meaningful Life</li></a>
             <a href="http://www.vincentliux.com/articles/"><li>More...</li></a>
         </ul>
+        <hr/>
+        <h1 class="content-title" id="art">Music Videos</h1>
+        <div id="bili-video-div">
+            <iframe id=bili src="//player.bilibili.com/player.html?aid=87701378&cid=149827087&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+        </div>
+        <div id="bili-img-div">
+<!--            <div class="bili-item">-->
+<!--                <img class='bili-images' src="images/portrait.JPG">-->
+<!--                <div class="bili-text">Winter Wind</div>-->
+<!--            </div>-->
+<!--            <div class="bili-item">-->
+<!--                <img class='bili-images' src="images/portrait.JPG">-->
+<!--                <div class="bili-text">打上花火</div>-->
+<!--            </div>-->
+            <div class='bili-images' id="biliimg1"></div>
+            <div class='bili-images' id="biliimg2"></div>
+            <div class='bili-images' id="biliimg3"></div>
+            <div class='bili-images' id="biliimg4"></div>
+            <div class='bili-images' id="biliimg5"></div>
+            <div class='bili-images' id="biliimg6"></div>
+        </div>
+        <a href="https://space.bilibili.com/26205291"><p id="bili-more">More...</p></a>
         <!--        <hr/>-->
         <!--            <hr/>-->
         <!--            <h1 class="content-title">Experience</h1>-->
@@ -273,7 +331,7 @@
 <footer>
     <div class="container" id="foot-cont">
         <p id='foo' class="m-0 text-center text-black-50">@Vincent's Blog 2020. Author: Wenxuan Liu(Vincent). Dark Mode Design: Sofia Ni. Powered by HTML&CSS&JS with JQuery, Apache Ubuntu server</p>
-        <p id='foo2' class="m-0 text-center text-black-50">Contact: allenliux01@163.com Wechat: 1747964236 Ins:allenliux01</p>
+        <p id='foo2' class="m-0 text-center text-black-50">Contact: allenliux01@163.com Wechat: 1747964236 Ins:allenliux01 Last Updated: Nov. 2020</p>
     </div>
 </footer>
 </body>

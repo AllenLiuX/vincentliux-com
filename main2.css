@@ -362,26 +362,26 @@ b{
 
 .html5       { width:90%;  -moz-animation:html5 5s ease-out;       -webkit-animation:html5 5s ease-out;       }
 .css3        { width:70%;  -moz-animation:css3 3s ease-out;        -webkit-animation:css3 3s ease-out;        }
-.jquery      { width:60%;  -moz-animation:jquery 3s ease-out;      -webkit-animation:jquery 3s ease-out;      }
-.photoshop   { width:80%;  -moz-animation:photoshop 4s ease-out;   -webkit-animation:photoshop 4s ease-out;   }
-.dreamweaver { width:40%; -moz-animation:dreamweaver 4s ease-out; -webkit-animation:dreamweaver 4s ease-out; }
+.jquery      { width:80%;  -moz-animation:jquery 3s ease-out;      -webkit-animation:jquery 3s ease-out;      }
+.photoshop   { width:50%;  -moz-animation:photoshop 4s ease-out;   -webkit-animation:photoshop 4s ease-out;   }
+.dreamweaver { width:60%; -moz-animation:dreamweaver 4s ease-out; -webkit-animation:dreamweaver 4s ease-out; }
 
-@-moz-keyframes html5       { 0%  { width:0px;} 100%{ width:90%;}  }
-@-moz-keyframes css3        { 0%  { width:0px;} 100%{ width:70%;}  }
-@-moz-keyframes jquery      { 0%  { width:0px;} 100%{ width:60%;}  }
-@-moz-keyframes photoshop   { 0%  { width:0px;} 100%{ width:80%;}  }
-@-moz-keyframes dreamweaver { 0%  { width:0px;} 100%{ width:40%;} }
+/*@-moz-keyframes html5       { 0%  { width:0px;} 100%{ width:90%;}  }*/
+/*@-moz-keyframes css3        { 0%  { width:0px;} 100%{ width:70%;}  }*/
+/*@-moz-keyframes jquery      { 0%  { width:0px;} 100%{ width:80%;}  }*/
+/*@-moz-keyframes photoshop   { 0%  { width:0px;} 100%{ width:50%;}  }*/
+/*@-moz-keyframes dreamweaver { 0%  { width:0px;} 100%{ width:60%;} }*/
 
 @-webkit-keyframes html5       { 0%  { width:0px;} 100%{ width:90%;}  }
 @-webkit-keyframes css3        { 0%  { width:0px;} 100%{ width:70%;}  }
-@-webkit-keyframes jquery      { 0%  { width:0px;} 100%{ width:60%;}  }
-@-webkit-keyframes photoshop   { 0%  { width:0px;} 100%{ width:80%;}  }
-@-webkit-keyframes dreamweaver { 0%  { width:0px;} 100%{ width:40%;} }
+@-webkit-keyframes jquery      { 0%  { width:0px;} 100%{ width:80%;}  }
+@-webkit-keyframes photoshop   { 0%  { width:0px;} 100%{ width:50%;}  }
+@-webkit-keyframes dreamweaver { 0%  { width:0px;} 100%{ width:60%;} }
 
 .s1       { width:80%;  -moz-animation:s1 5s ease-out;       -webkit-animation:s1 5s ease-out;       }
 .s2        { width:50%;  -moz-animation:s2 3s ease-out;        -webkit-animation:s2 3s ease-out;        }
 .s3      { width:40%;  -moz-animation:s3 3s ease-out;      -webkit-animation:s3 3s ease-out;      }
-.s4   { width:60%;  -moz-animation:s4 4s ease-out;   -webkit-animation:s4 4s ease-out;   }
+.s4   { width:75%;  -moz-animation:s4 4s ease-out;   -webkit-animation:s4 4s ease-out;   }
 .s5 { width:70%; -moz-animation:s5 4s ease-out; -webkit-animation:s5 4s ease-out; }
 
 /*@-moz-keyframes s1       { 0%  { width:0px;} 100%{ width:90%;}  }*/
@@ -393,7 +393,7 @@ b{
 @-webkit-keyframes s1       { 0%  { width:0px;} 100%{ width:80%;}  }
 @-webkit-keyframes s2        { 0%  { width:0px;} 100%{ width:50%;}  }
 @-webkit-keyframes s3      { 0%  { width:0px;} 100%{ width:40%;}  }
-@-webkit-keyframes s4   { 0%  { width:0px;} 100%{ width:60%;}  }
+@-webkit-keyframes s4   { 0%  { width:0px;} 100%{ width:75%;}  }
 @-webkit-keyframes s5 { 0%  { width:0px;} 100%{ width:70%;} }
 
 
@@ -461,4 +461,83 @@ input.cmn-toggle-round-flat:checked + label:after {
   font-family: 'Poppins-ExtraLight', Sans-Serif;
   font-size: 1em;
   /*margin-left: -80px;*/
+}
+
+#bili{
+  width: 840px;
+  height: 530px;
+  max-width: 100%;
+  margin-left: 50%;
+  transform: translateX(-420px);
+  box-shadow: 0px 16px 26px 0px rgba(0,0,0,0.5);
+}
+
+#bili-img-div{
+  margin-top: 3vh;
+  text-align: center;
+  /*display: inline-block;*/
+}
+
+.bili-images{
+  background-image: url('images/winter wind cover.png');
+   background-position: center 0px;
+  /*background-attachment: fixed;*/
+  background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  width: 10vw;
+  height: 8vw;
+  transition: all 1s ease;
+  box-shadow: 0px 16px 26px 0px rgba(0,0,0,0.5);
+  /*width: 10%;*/
+  margin-left: 1vw;
+  opacity: 0.5;
+  color: white;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#biliimg2{
+  background-image: url('images/playinglove.png');
+}
+
+#biliimg3{
+  background-image: url('images/hxazgsja.jpeg');
+}
+
+#biliimg4{
+  background-image: url('images/打上花火.png');
+}
+
+#biliimg5{
+  background-image: url('images/前前前世.png');
+}
+
+#biliimg6{
+  background-image: url('images/rb all night cover.png');
+}
+
+.bili-images:hover{
+  opacity: 0.9;
+}
+
+.bili-item{
+  /*position: relative;*/
+  display:inline;
+  text-align: center;
+  /*justify-content: center;*/
+}
+
+/*.bili-text{*/
+/*  position: relative;*/
+/*  !*text-align: center;*!*/
+/*    display:block;*/
+/*}*/
+
+#bili-more{
+    text-align: center;
+    list-style-type: none;
+    font-size: 1.3em;
+    line-height: 2;
+  color: white;
 }
