@@ -2,7 +2,7 @@ let i = 0;
 let j = 500;
 let direction = -1;
 let bili_source = [
-    '//player.bilibili.com/player.html?aid=87701378&cid=149827087&page=1',
+    '//player.bilibili.com/player.html?aid=87701378&bvid=BV1g7411b7JX&cid=149827087&page=1',
     "//player.bilibili.com/player.html?aid=287268542&bvid=BV1Rf4y1D7d8&cid=243249542&page=1",
     '//player.bilibili.com/player.html?aid=93314844&bvid=BV1eE41177Nf&cid=159313677&page=1',
     '//player.bilibili.com/player.html?aid=16819730&bvid=BV1zW411a7ai&cid=27480277&page=1',
