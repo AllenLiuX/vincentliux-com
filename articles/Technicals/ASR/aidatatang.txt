@@ -1,0 +1,58 @@
+#方法
+https://blog.csdn.net/weixin_44532659/article/details/95960300
+
+#开源模型
+http://kaldi-asr.org/models/m10
+
+
+#修改的bug
+参考make_mfcc.sh里的option，修改了local/decode.sh第二十四行，删掉了utt2dur，改成了utt2num-frames:
+diff文件：
+24c24
+< 	steps/make_mfcc.sh --write-utt2num-frames false --mfcc-config conf/mfcc_hires.conf --nj $nj --cmd "$train_cmd" data/${datadir}_hires exp/make_mfcc/ ${mfccdir}
+---
+> 	steps/make_mfcc.sh --write-utt2dur false --mfcc-config conf/mfcc_hires.conf --nj $nj --cmd "$train_cmd" data/${datadir}_hires exp/make_mfcc/ ${mfccdir}
+
+#parse位置
+./utils/parse_options.sh
+
+#make_mfcc.sh
+nj=4
+cmd=run.pl
+mfcc_config=conf/mfcc.conf
+compress=true
+write_utt2num_frames=false  # if true writes utt2num_frames                                                                                            
+# End configuration section.                                                                                                                           
+
+echo "$0 $@"  # Print the command line for logging                                                                                                     
+
+if [ -f path.sh ]; then . ./path.sh; fi
+. parse_options.sh || exit 1;
+
+if [ $# -lt 1 ] || [ $# -gt 3 ]; then
+   echo "Usage: $0 [options] <data-dir> [<log-dir> [<mfcc-dir>] ]";
+   echo "e.g.: $0 data/train exp/make_mfcc/train mfcc"
+   echo "Note: <log-dir> defaults to <data-dir>/log, and <mfccdir> defaults to <data-dir>/data"
+   echo "Options: "
+   echo "  --mfcc-config <config-file>                      # config passed to compute-mfcc-feats "
+   echo "  --nj <nj>                                        # number of parallel jobs"
+   echo "  --cmd (utils/run.pl|utils/queue.pl <queue opts>) # how to run jobs."
+   echo "  --write-utt2num-frames <true|false>     # If true, write utt2num_frames file."
+   exit 1;
+fi
+
+data=$1
+if [ $# -ge 2 ]; then
+  logdir=$2
+else
+  logdir=$data/log
+fi
+if [ $# -ge 3 ]; then
+  mfccdir=$3
+else
+  mfccdir=$data/data
+fi
+
+
+2020.5
+改了make_mfcc.sh 128 为注释

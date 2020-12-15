@@ -1,0 +1,110 @@
+语音模型
+语音标注文件：.trn
+语音标注文件主要包含三部分：
+
+分词后的语音文字
+文字对应的拼音（含音调）
+文字对应的音素（中文为声母、韵母）
+
+语言模型
+
+#FST可视化
+fst可视化的两个基本命令
+
+fstprint和fstdraw是可视化用到的两个基本命令
+fstprint用于打印fst，可以将二进制的fst以文件形式打印出来。Fstprint的基本用法如下
+fstprint  [--isymbols=xxxx --osymbols=xxxx ]  FST
+参数—isymbols和—osymbols分别表示输入符号表和输出符号表，这两个参数可以省略。
+fstdraw用于画fst图，其使用方式跟fstprint类似。Fstdraw得到的结果是dot文件，通过dot命令转为ps格式，然后可以由ps2pdf命令转为pdf文档。
+
+fstdraw使用示例
+fstdraw [--isymbols=phones.txt --osymbols=words.txt] L.fst | dot –Tps  |  ps2pdf – L.pdf
+————————————————
+
+#查看模型
+之后会在 exp 文件夹下产生一个 mono 的目录，里面以 .mdl 结尾的就保存了模型的参数。使用下面的命令可以查看模型的内容。
+$ gmm-copy --binary=false exp/mono/0.mdl - | less
+
+
+HCLG = asl(min(rds(det(H’ o min(det(C o min(det(L o G))))))))
+G.fst：语言模型。
+
+L.fst：词典，输入是Phone，输出是word.
+
+C.fst：表示文本依赖，它的输出的phones，输入是文本依赖的音素，如triphone.如： vector ctx_window = { 12, 15, 21 }; 它的含义：id = 15 的 phone 为 中心 phone, left phone id = 12, right phone id = 21。
+
+H: 包括HMM definitions,其输出 symbol 为 context-dependency phones, 其输入 symbol 为 transitions-ids(即 对 pdf-id 和 其它信息编码后的 id)。粗暴的理解为把HMM的pdf-id映射到如triphone上。即扩展了HMM。
+
+合体：HCLG.fst，就是把1-4步合起来，最终该fst的输入是pdf-id,输出为对应的词组,用图表示为:
+ ———————————————— 
+ 
+ G是对语法或者语言模型编码的受体，它的输入和输出是一样的；
+
+        L是发音字典，它的输出是单词，输入是音素；
+
+        C代表语境相关性，它的输出是音素，输入符号代表上下文相关音素；
+
+        H包含了Hmm定义，它的输出符号代表上下文相关音素，输入符号是包含概率分布函数id和其他信息的状态转移id
+————————————————
+我们尽可能的想保证HCLG是随机的；在传统的方案中，我们使用"push-weights"操作。我们确保随机性的方法是不同的，and is based on ensuring that no graph creation step "takes away" stochasticity。
+
+如果想用一句话来总结我们的方法（很显然，一句话抓不住所有细节），这句话如下：
+
+    HCLG=asl(min(rds(det(H' * min(det(C * min(det(L * G)))))))), 这里asl=="add-self-loops", rds=="remove-disambiguation symbols", H'是没有自循环的H。
+
+Weight-pushing 不是这个方案的一部分，相反，只要G是随机的，我们就要确保图谱创建的任何阶段都不会阻止结果的随机性。当然，由于带有回退（backoff）的arpa格式语言模型用fst的表达方式，G一般都不是随机的，但是我们的方法至少确保这种非随机性"stays put", 而且也不会比开始的时候更糟，这种方法避免了Weight-pushing操作失败或者是方案更糟。
+————————————————
+
+#构建
+解码图构建主要涉及的脚本文件为mkgraph.sh：
+
+Ø  输入：lang文件夹，模型文件final.mdl，决策树文件tree
+
+Ø  输出：解码图文件../graph/HCLG.fst
+
+#输入列表
+其中lang文件夹下的文件来自于数据准备阶段，模型和决策树来自于建模阶段
+
+$lang/L.fst          #词典fst
+
+$lang/G.fst          #语言模型fst
+
+$lang/phones.txt     #音素列表，存储音素文本到音素id的映射
+
+$lang/words.txt      #词列表，存储词文本到音素id的映射
+
+$lang/phones/silence.csl   #静音id列表
+
+$lang/phones/disambig.int  #消歧符号id列表
+
+$model         #最终模型文件final.mdl
+
+$tree           #决策树文件  
+ ———————————————— 
+ #步骤：
+ 将词典L.fst和语言模型G.fst组合（fsttablecompose），然后进行确定化（fstdeterminizestar）和最小化（fstminimizeencoded），得到LG.fst，并确保结果stochastic，即从每个状态输出的转移概率之和为1。
+
+  组合的作用：将每个word扩展到phone级别。（输入标签为）
+
+  确定化的作用：在每个语言模型的状态（word）下，构建树结构的词典。
+
+  最小化的作用：类似后缀共享（suffix-sharing）。
+
+  上述操作的部分C++代码是Kaldi中另写的代码，与OpenFst库中代码稍有不同，包括：
+
+  fsttablecompose与fstcompose类似，但是速度更快；
+  fstminimizeencoded更便捷；
+  fstdeterminizestar与fstdeterminize类似，但其中包含空转移去除处理；
+  
+  将上下文C.fst和LG.fst组合（fstcomposecontext）得到CLG.fst，并确保结果stochastic。
+  
+  基于HMM拓扑结构、转移概率和决策树，构建不带自转移的声学模型Ha.fst（make-h-transducer），每个转移的输入标签为“trans-id”（编码了“GMM模型的pdf-id和音素信息”）。
+  
+  将不带自转移的声学模型Ha.fst和CLG.fst组合（fsttablecompose），然后进行确定化（fstdeterminizestar），去除消歧符号，去除空转移，然后进行最小化（fstminimizeencoded），得到HCLGa.fst，并确保结果stochastic。
+  
+  增加每个HMM状态的自转移，从HCLGa.fst得到HCLG.fst。在最后一步加入自转移使得前面几步可以构建较大的解码图。选项reorder将自转移放在其他状态转移之后，加快解码速度。并确保最终结果stochastic。
+ ———————————————— 
+原文链接：https://blog.csdn.net/baidu_36137891/article/details/77568695
+
+ 
+kernel核函数
