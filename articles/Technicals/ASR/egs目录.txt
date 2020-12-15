@@ -1,0 +1,72 @@
+egs ：此目录为 Kaldi 例子目录，其中例子包含了不乏语音识别、语种识别、声纹识别、关键字识别等。
+misc : 此目录包含了一些 pdf、以及相关 docker、htk 等资源
+scripts: 此目录只用来存放 Rnnlm，以及相应的运行脚本。
+src : 此目录为 Kaldi 的源代码目录，Kaldi 的多数算法的源代码都存放于此，其中不乏GMM、Ivector、Nnet等一系列的算法。
+tools： 此目录主要存放 Kaldi 依赖库的安装脚本
+windows： 此目录为在 Windows 平台运行所必须的脚本以及相关的执行程序。
+
+
+Aishell : 此目录为中文语音识别和声纹识别相关例子。
+Aishell2 ： 此目录主要为中文语音识别例子，但是针对 Aishell 在脚本方面更加规整。
+ami : 此目录主要涉及到多信道语音识别的例子。
+an4 : 此例子为 CMU 提供语音识别例子，并没有涉及神经网络。
+apiai_decode: 此例子为解码器使用的例子，其中包含了如何使用预训练模型，这里主要针对的是 Nnet3 解码。
+aspire: 此为ASpIRE 挑战赛的例子，其中包含了怎样使用噪声数据构建多条件数据的例子。
+aurora4: 此例子主要介绍 RBM 预训练。
+babel: 此例子主要是用来训练 KWS （Key Word Search）。
+babel_multilang: 此例子为训练多语音 KWS。
+bentham: 手写笔识别的例子。
+bn_music_speech : 音乐与语音区分的例子。
+callhome_diarization : 说话人分割的例子。
+callhome_etyptian: 埃及语语音识别例子。
+chime1-5 : 主要针对 CHiME 竞赛开放的例子。
+cigar : 图像分类的例子。
+commonvoice: Mozilla Common Voice 语音识别的例子。
+csj : 日语 语音识别例子。
+dihard_2018 : DiHARD Speech Diarization CHALLENGE 的例子。
+fame : 富里西语语音识别和声纹识别的例子。
+farsdat: 主要用来声学语音研究和语音识别的例子。
+fisher_callhome_spanish : 使用 Callhome 预料进行语音识别的例子。
+fisher_english: 英文双声道 8000 Hz 对话电话语音数据集的语音识别例子。
+fisher_swbd: 包含 fisher 数据集以及 swbd 数据集的语音识别例子。
+gale_arabic: 阿拉伯语语音识别例子。
+gale_mandarin: 普通话语音识别例子。
+gp: 全球电话语音识别例子（多语种语音识别例子）。
+heroico: 西班牙语音识别例子。
+houst: 普通话电话语音识别例子。
+hub4_english : 英语新闻广播语音识别例子。
+hub4_spanish: 西班牙新闻广播语音识别例子。
+iam: IAM 手写笔识别例子。
+iban: 语音识别例子。
+ifnenit: 阿拉伯语手写笔识别例子。
+librispeech: 英语语音识别例子。
+lre/lre07 : 语种识别例子。
+madcat_ar : 手写笔识别例子。
+madcat_zh: 中文手写笔识别例子。
+mini_librispeech: 英语语音识别例子。
+mult_en: 英语 LVCSR 例子。
+pub: RNNLM 模型构建例子。
+reverb: REVERB 挑战赛例子。
+rimes: 法语手写笔识别例子。
+rm: 英语语音识别例子，包含了如何进行迁移学习。
+sitw: sitw 说话人识别挑战赛的例子。
+sprakbanken: 丹麦语语音识别例子。
+sprakbanken_swe: 瑞典语语音识别例子。
+sre08/10/16: 说话人识别的例子。
+svhn: 图像分类的例子。
+swahili: 班图人语 语音识别例子。
+swab: 双声道对电话语音识别例子。
+tedium: 英语语音识别例子。
+thchs30: 普通话语音识别例子。
+tidigits: 基础语音识别的例子。
+timit: 主要是 GMM/HMM 语音识别例子。
+tunisian_msa: 阿拉伯语音识别例子。
+uw3：OCR 识别例子。
+voxceleb: 说话人识别例子。
+vystadial_cz: 捷克语语音识别例子。
+voxforge: 基础语音识别例子，以及对应的在线 demo 的例子。
+vystadial_en: 英文语音识别例子。
+wsj: wsj 英文语音识别例子。
+yesno: 独立词语音识别例子。
+yomdle_fa/korean/russian/tamil/zh: OCR 识别例子。
+zeroth_korean: 朝鲜语语音识别例子。

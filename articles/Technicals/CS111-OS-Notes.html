@@ -1,0 +1,523 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>CS 111 Reading</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit inherit; background-repeat: inherit inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) { 
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror-linenumber { }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit inherit; background-repeat: inherit inherit; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; background-repeat: initial initial; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print { 
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; background-position: initial initial; background-repeat: initial initial; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) { 
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; background-position: initial initial; background-repeat: initial initial; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; }
+a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; background-repeat: initial initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); background-position: initial initial; background-repeat: initial initial; }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    padding-bottom: .3em;
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+   padding-bottom: .3em;
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+ .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} 
+</style>
+</head>
+<body class='typora-export' >
+<div  id='write'  class = 'is-mac'><h1><a name="cs-111" class="md-header-anchor"></a><span>CS 111</span></h1><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n0"><a class="md-toc-inner" href="#cs-111">CS 111</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n2"><a class="md-toc-inner" href="#1-interface-stability">1 Interface Stability</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n3"><a class="md-toc-inner" href="#the-criticality-of-interfaces-in-architecture">The Criticality of Interfaces in Architecture</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n11"><a class="md-toc-inner" href="#interfaces-vs-implementations">Interfaces vs. Implementations</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n17"><a class="md-toc-inner" href="#program-vs-user-interfaces">Program vs. User Interfaces</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n25"><a class="md-toc-inner" href="#is-every-interface-carved-in-stone">Is every interface carved in stone?</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n33"><a class="md-toc-inner" href="#interface-stability-and-design">Interface Stability and Design</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n39"><a class="md-toc-inner" href="#2-software-interface-standards">2 Software Interface Standards</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n40"><a class="md-toc-inner" href="#现实因素">现实因素</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n48"><a class="md-toc-inner" href="#发展">发展</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n61"><a class="md-toc-inner" href="#software-interface-standardization">Software Interface Standardization</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n80"><a class="md-toc-inner" href="#问题1-confusing-interfaces-with-implementations">问题1 Confusing interfaces with Implementations</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n86"><a class="md-toc-inner" href="#问题-2-the-rate-of-evolution-for-both-technology-and-applications">问题 2 The rate of evolution, for both technology and applications</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n87"><a class="md-toc-inner" href="#proprietary-vs-open-standards">Proprietary vs Open Standards</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n93"><a class="md-toc-inner" href="#api-application-programming-interfaces">API: Application Programming Interfaces</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n112"><a class="md-toc-inner" href="#abi-application-binary-interfaces">ABI: Application Binary Interfaces</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n126"><a class="md-toc-inner" href="#portability-benefits-">portability benefits +++</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n129"><a class="md-toc-inner" href="#3-object-modules-linkage-editing-libraries">3 Object Modules, Linkage Editing, Libraries </a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n130"><a class="md-toc-inner" href="#components-of-software-tool-chain">components of software tool chain</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n131"><a class="md-toc-inner" href="#compiler---sources">Compiler (-&gt; source.s)</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n135"><a class="md-toc-inner" href="#assembler---objecto">Assembler (-&gt; object.o)</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n143"><a class="md-toc-inner" href="#linkage-editor--static-librarya---executable">Linkage editor  (static library.a -&gt; executable)</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n153"><a class="md-toc-inner" href="#program-loader">Program loader</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n161"><a class="md-toc-inner" href="#object-modules">object modules</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n162"><a class="md-toc-inner" href="#executable-load-modules">executable (load) modules</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n177"><a class="md-toc-inner" href="#relocatable-object-modules">relocatable object modules</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n183"><a class="md-toc-inner" href="#libraries">Libraries</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n189"><a class="md-toc-inner" href="#linkage-editing">Linkage Editing</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n198"><a class="md-toc-inner" href="#load-modules">Load Modules</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n217"><a class="md-toc-inner" href="#shared-libraries-run-time-loadable">Shared Libraries (run-time loadable)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n247"><a class="md-toc-inner" href="#dynamically-loaded-libraries">Dynamically Loaded Libraries</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n268"><a class="md-toc-inner" href="#sl-vs-dll">SL vs DLL</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n280"><a class="md-toc-inner" href="#4-stack-frames-and-linkage-conventions">4 Stack Frames and Linkage Conventions</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n281"><a class="md-toc-inner" href="#stack">Stack</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n291"><a class="md-toc-inner" href="#subroutine-linkage-conventions">Subroutine Linkage Conventions</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n306"><a class="md-toc-inner" href="#traps-and-interrupts">Traps and Interrupts</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n307"><a class="md-toc-inner" href="#procedure-vs-interrupts">Procedure vs interrupts</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n315"><a class="md-toc-inner" href="#interrupt-mechanism">Interrupt mechanism</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n329"><a class="md-toc-inner" href="#5-real-time-scheduling">5 Real Time Scheduling</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n330"><a class="md-toc-inner" href="#real-time-system">Real-Time System</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n340"><a class="md-toc-inner" href="#scheduling-algorithms">Scheduling Algorithms</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n341"><a class="md-toc-inner" href="#no-scheduler-排队">No scheduler: 排队</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n342"><a class="md-toc-inner" href="#static-schedulingfixed-schedule">Static scheduling：fixed schedule</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n343"><a class="md-toc-inner" href="#dynamic-scheduling">Dynamic scheduling</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n344"><a class="md-toc-inner" href="#preempty">Preempty</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n354"><a class="md-toc-inner" href="#6-garbage-collection-and-defragmentation">6 Garbage Collection and Defragmentation </a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n355"><a class="md-toc-inner" href="#garbage-collection">Garbage Collection</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n369"><a class="md-toc-inner" href="#defragmentation">Defragmentation</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n379"><a class="md-toc-inner" href="#7-working-sets">7 Working Sets</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n393"><a class="md-toc-inner" href="#implementation">Implementation</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n401"><a class="md-toc-inner" href="#dynamic-equilibrium-to-the-rescue">Dynamic Equilibrium to the rescue</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n410"><a class="md-toc-inner" href="#8-inter-process-communication">8 Inter-Process Communication</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n411"><a class="md-toc-inner" href="#process-interactions">Process Interactions</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n429"><a class="md-toc-inner" href="#uni-directional-byte-streams">Uni-Directional Byte Streams</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n448"><a class="md-toc-inner" href="#named-pipes">Named Pipes</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n460"><a class="md-toc-inner" href="#mailboxes">Mailboxes</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n470"><a class="md-toc-inner" href="#general-network-connections">General Network Connections</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n480"><a class="md-toc-inner" href="#shared-memory">Shared Memory</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n491"><a class="md-toc-inner" href="#network-conntection-and-out-of-band-signals">Network Conntection and Out-of-Band Signals</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n500"><a class="md-toc-inner" href="#9-user-mode-thread-implementation">9 User-Mode Thread Implementation</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n501"><a class="md-toc-inner" href="#thread">Thread</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n515"><a class="md-toc-inner" href="#simple-threads-library-user-mode">Simple Threads Library (User Mode)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n529"><a class="md-toc-inner" href="#kernel-implemented-threads">Kernel implemented threads</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n538"><a class="md-toc-inner" href="#performance">Performance</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n545"><a class="md-toc-inner" href="#10-deadlock-avoidance">10 Deadlock Avoidance</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n571"><a class="md-toc-inner" href="#reservations">Reservations</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n581"><a class="md-toc-inner" href="#over-booking">Over-Booking</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n589"><a class="md-toc-inner" href="#dealing-with-rejection">Dealing with Rejection</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n601"><a class="md-toc-inner" href="#11-health-monitoring-and-recovery">11 Health Monitoring and Recovery</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n604"><a class="md-toc-inner" href="#lec-1">Lec 1</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n605"><a class="md-toc-inner" href="#operating-system">Operating System</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n606"><a class="md-toc-inner" href="#what-it-does">What it does</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n617"><a class="md-toc-inner" href="#instruction-set-architeturesisas">Instruction Set Architetures(ISAs)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n624"><a class="md-toc-inner" href="#types-of-os-resources">Types of OS Resources</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n625"><a class="md-toc-inner" href="#serially-reusable-resources-轮流用">Serially reusable resources 轮流用</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n633"><a class="md-toc-inner" href="#partitionable-resoures-有限共享">Partitionable resoures 有限共享</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n644"><a class="md-toc-inner" href="#sharable-resources-无限共享">Sharable resources 无限共享</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n650"><a class="md-toc-inner" href="#lec-2">Lec 2</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n651"><a class="md-toc-inner" href="#abstractions">Abstractions</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n672"><a class="md-toc-inner" href="#services-higher-level-abstractions">Services: Higher level abstractions</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n673"><a class="md-toc-inner" href="#分类">分类</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n681"><a class="md-toc-inner" href="#性质">性质</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n693"><a class="md-toc-inner" href="#方法">方法</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n782"><a class="md-toc-inner" href="#library">Library</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n783"><a class="md-toc-inner" href="#static">Static</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n791"><a class="md-toc-inner" href="#shared">Shared</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n813"><a class="md-toc-inner" href="#dynamic">Dynamic</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n819"><a class="md-toc-inner" href="#api-application-program-interfaces">API (Application Program Interfaces)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n827"><a class="md-toc-inner" href="#abi-applcation-binary-interfaces">ABI (Applcation Binary Interfaces)</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n837"><a class="md-toc-inner" href="#lec-3">Lec 3</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n838"><a class="md-toc-inner" href="#process">Process</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n842"><a class="md-toc-inner" href="#state">State</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n855"><a class="md-toc-inner" href="#process-address-space">Process address space</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n861"><a class="md-toc-inner" href="#code-segment">Code segment</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n867"><a class="md-toc-inner" href="#data-segment">Data segment</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n875"><a class="md-toc-inner" href="#stack-segment">Stack segment</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n885"><a class="md-toc-inner" href="#process-descriptor">Process descriptor</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n896"><a class="md-toc-inner" href="#other-process-state--not-in-pd">other process state ( not in PD)</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n909"><a class="md-toc-inner" href="#lec-4">Lec 4</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n910"><a class="md-toc-inner" href="#scheduling">Scheduling</a></span></p></div><p>&nbsp;</p><h2><a name="1-interface-stability" class="md-header-anchor"></a><span>1 Interface Stability</span></h2><h4><a name="the-criticality-of-interfaces-in-architecture" class="md-header-anchor"></a><span>The Criticality of Interfaces in Architecture</span></h4><ul><li><span>defines the major components of the system, the functionality of each, and the interfaces between them. 先规定好，再独自设计，然后交互</span></li><li><span>A software interface specification is a form of contract.</span></li><li><span>&quot;Posix file semantics&quot;. 不遵守的话会发生很多问题。</span></li></ul><h4><a name="interfaces-vs-implementations" class="md-header-anchor"></a><span>Interfaces vs. Implementations</span></h4><ul><li><span>Interfaces are fixed all the time.</span></li><li><span>Implementations  are flexible.</span></li></ul><h4><a name="program-vs-user-interfaces" class="md-header-anchor"></a><span>Program vs. User Interfaces</span></h4><ul><li><span>Human beings are amazingly robust.</span></li><li><span>Code is nowhere nearly so robust.</span></li><li><span>you have to trust that what ever platform they run it on will correctly implement all of the interfaces on which your program depends.</span></li></ul><h4><a name="is-every-interface-carved-in-stone" class="md-header-anchor"></a><span>Is every interface carved in stone?</span></h4><ul><li><span>Interface Polymorphism (Version number)</span></li><li><span>Versioned Interfaces（Backwards comptibility）</span></li><li><span>specific support commitments (eg support for next 5 years)</span></li></ul><h4><a name="interface-stability-and-design" class="md-header-anchor"></a><span>Interface Stability and Design</span></h4><ul><li><span>upwards-compatible way</span></li><li><span>consider all of the different types of change that are likely to happen over the life of this syste</span></li></ul><h2><a name="2-software-interface-standards" class="md-header-anchor"></a><span>2 Software Interface Standards</span></h2><h4><a name="现实因素" class="md-header-anchor"></a><span>现实因素</span></h4><ul><li><span>The cost of building different versions of an application for different hardware platforms</span></li><li><span>Computer sales were driven by the applications they could support.</span></li><li><span>Software Portability 影响产品生死。</span></li></ul><h4><a name="发展" class="md-header-anchor"></a><span>发展</span></h4><ul><li><p><span>Client changed into normal public.</span></p><ul><li><span>New applications have to work on both old and new devices. </span></li><li><span>Software upgrades cannot break existing applications.</span></li></ul></li><li><p><span>GOAL: whatever combination of software components wind up on a particular device will work together</span></p></li><li><p><span>SOLUTION: detailed specifications &amp; comprehensive compliance testing.</span></p></li></ul><h4><a name="software-interface-standardization" class="md-header-anchor"></a><span>Software Interface Standardization</span></h4><p><strong><span>优点</span></strong></p><ul><li><span>details well considered</span></li><li><span>platform-neutral</span></li><li><span>very clear and complete specifications</span></li><li><span>freedom to explore alternative implementations</span></li></ul><p><strong><span>缺点</span></strong></p><ul><li><span>constrain the range of possible implementations</span></li><li><span>constraints on their consumers</span></li><li><span>many different stake-holders =&gt; difficult to evolve standards</span></li></ul><h4><a name="问题1-confusing-interfaces-with-implementations" class="md-header-anchor"></a><span>问题1 Confusing interfaces with Implementations</span></h4><ul><li><span>interface standards should not specify design. Rather they should specify behavior</span></li><li><span>interface specifications are written after the fact</span></li></ul><h4><a name="问题-2-the-rate-of-evolution-for-both-technology-and-applications" class="md-header-anchor"></a><span>问题 2 The rate of evolution, for both technology and applications</span></h4><h4><a name="proprietary-vs-open-standards" class="md-header-anchor"></a><span>Proprietary vs Open Standards</span></h4><ul><li><span>A Proprietary interface is one that is developed and controlled by a single organization</span></li><li><span>An Open Standard is one that is developed and controlled by a consortium of providers and/or consumers (e.g. the IETF network protocols)</span></li></ul><h4><a name="api-application-programming-interfaces" class="md-header-anchor"></a><span>API: Application Programming Interfaces</span></h4><ul><li><p><span>they are written at the source programming level (e.g. C, C++ , Java, Python). eg. write()</span></p></li><li><p><span>API specifications are a basis for software portability, but applications must be recompiled for each platform</span></p></li><li><p><span>+++ an application written to a particular API should easily recompile and correctly execute on any platform that supports that API</span></p></li><li><p><span>+++  any application written to supported APIs should easily port to their platform.</span></p></li><li><p><span>---  the API must be defined in a platform-independent way (to have the above benefits)</span></p><ul><li><span>Eg defined some type as int (implicitly assuming that to be at least 64 bits wide) might not work on a 32 bit machine. </span></li><li><span>accessed individual bytes within an int might not work on a big-endian machine. </span></li><li><span>assumed a particular feature implementation (e.g. fork(2)) might not be implementable on some platforms (e.g. Windows)</span></li></ul></li></ul><h4><a name="abi-application-binary-interfaces" class="md-header-anchor"></a><span>ABI: Application Binary Interfaces</span></h4><p><u><strong><span>An Application Binary Interface is the binding of an Application Programming Interface to an Instruction Set Architecture.</span></strong></u></p><p><span>Contains:</span></p><ul><li><span>binary representation of key data types </span></li><li><span>call to and return from a subroutine </span></li><li><span>Stack-frame structure</span></li><li><span>parameters, return values, registers, system calls, and signal deliveries.</span></li><li><span>formats of load modules, shared objects, and dynamically loaded libraries</span></li></ul><h5><a name="portability-benefits-" class="md-header-anchor"></a><span>portability benefits +++</span></h5><p><span>The resulting binary load module should correctly run, unmodified, on any platform that supports that ABI.</span></p><p><span>Used by compiler, linkage editor, program loader, operating system, or programmer who writes assembly language subroutines.</span></p><h2><a name="3-object-modules-linkage-editing-libraries" class="md-header-anchor"></a><span>3 Object Modules, Linkage Editing, Libraries </span></h2><h3><a name="components-of-software-tool-chain" class="md-header-anchor"></a><span>components of software tool chain</span></h3><h4><a name="compiler---sources" class="md-header-anchor"></a><span>Compiler (-&gt; source.s)</span></h4><ul><li><span>Reads source modules and included header files, parses the input language (e.g. C or Java), and infers the intended computations, for which it will generate lower level code (assembly code). </span></li></ul><h4><a name="assembler---objecto" class="md-header-anchor"></a><span>Assembler (-&gt; object.o)</span></h4><ul><li><span>each line of code often translating directly to a single </span><strong><span>machine language</span></strong><span> instruction or data item.</span></li><li><span>allows the declaration of variables, the use of macros, and references to externally defined code and data</span></li><li><span>func &amp; local symbols not have yet been assigned hard in-memory addresses. Only be expressed as offsets</span></li></ul><h4><a name="linkage-editor--static-librarya---executable" class="md-header-anchor"></a><span>Linkage editor  (static library.a -&gt; executable)</span></h4><ul><li><span>把所有东西都放进virtual address space.</span></li><li><span>reads a specified set of object modules, placing them consecutively into a virtual address space, and noting where (in that virtual address space) each was placed.</span></li><li><span>searches a specified set of libraries to find object modules that can satisfy those references, and places them in the </span><strong><span>evolving virtual address space</span></strong><span> as well.</span></li><li><span>The resulting bits represent a program that is ready to be loaded into memory and executed</span></li></ul><h4><a name="program-loader" class="md-header-anchor"></a><span>Program loader</span></h4><ul><li><span>part of the operating system</span></li><li><span>examines the information in a load module, creates an appropriate virtual address space, and reads the instructions and initialized data values from the load module into that virtual address space.</span></li><li><span>map shared libraries into VAS.</span></li></ul><h3><a name="object-modules" class="md-header-anchor"></a><span>object modules</span></h3><h4><a name="executable-load-modules" class="md-header-anchor"></a><span>executable (load) modules</span></h4><ul><li><p><span>the code (machine language instructions) within an object module are Instruction Set Architecture (ISA) specific. </span></p></li><li><p><span>ELF (Executable and Linkable Format) makes the formats common across ISAs.</span></p><ul><li><span>header section</span></li><li><span>Code and Data section</span></li><li><span>symbol table (for external)</span></li><li><span>A collection of relocation entries</span></li></ul></li></ul><h4><a name="relocatable-object-modules" class="md-header-anchor"></a><span>relocatable object modules</span></h4><ul><li><span>incomplete. They make references to code or data items that must be supplied from other modules. </span></li><li><span>not yet been determined where (at which addresses). Only have relative address.</span></li></ul><h3><a name="libraries" class="md-header-anchor"></a><span>Libraries</span></h3><ul><li><span>Libraries are not always orthogonal and independent. (可以call 其他libraries)</span></li><li><span>顺序： If we call a function from library A, and library A calls functions from library B, we may need to search library A before searching library B。</span></li></ul><h3><a name="linkage-editing" class="md-header-anchor"></a><span>Linkage Editing</span></h3><p><span> </span><strong><span>filling in all of the linkages (connections) between the loaded modules (by linkage editor, ld(1)):</span></strong></p><ul><li><span>Resolution: search the specified librarie。</span></li><li><span>Loading: text &amp; data -&gt; single virtual address space</span></li><li><span>Relocation: go through all of the relocation entries, correctly reflect the chosen addresses.</span></li></ul><h3><a name="load-modules" class="md-header-anchor"></a><span>Load Modules</span></h3><ul><li><p><span>≈ object modules,  contains multiple sections (code, data, symbol table).</span></p></li><li><p><span>complete and requires no relocation.</span></p></li><li><p><span>load new program (exec):</span></p><ul><li><span>Consults the load module</span></li><li><span>Allocates the appropriate segments in VAS</span></li><li><span>Reads the contents from LM to memory</span></li><li><span>Creates a stack segment</span></li></ul></li><li><p><span>have a symbol table to receive an exception.</span></p></li></ul><h3><a name="shared-libraries-run-time-loadable" class="md-header-anchor"></a><span>Shared Libraries (run-time loadable)</span></h3><ul><li><span>Reserve an address for each shared library. </span></li><li><span>SL -&gt; read-only code segment.</span></li><li><span>Assign a number (0-n) to each routine + put redirection table at the beginning of that shared segment</span></li><li><span>stub library, that defines symbols for every entry point in the shared library</span></li><li><span>Linkage edit the client program with the stub library.</span></li><li><span>When run,  OS notices that the program requires shared libraries, open the associated (sharable, read-only) code segments, and map into address space. (in  ld.so(8))</span></li></ul><p><strong><span>优点</span></strong></p><ul><li><span>single copy implementation</span></li><li><span>version controlled by a library path environment variable</span></li><li><span>program not affected by changes in the sizes of library routines or the addition of new modules.</span></li><li><span>stub modules -&gt;  one shared library to make calls into another.</span></li></ul><p><strong><span>缺点</span></strong></p><ul><li><span>read-only code -&gt; no static data</span></li><li><span>cannot make any static calls or reference global variables to/in the client program.</span></li></ul><h3><a name="dynamically-loaded-libraries" class="md-header-anchor"></a><span>Dynamically Loaded Libraries</span></h3><ul><li><p><span>delay the loading of a module until it is actually needed. </span></p></li><li><p><span>User mode: dlopen(3). OS mode:  dynamically load device drivers or file system implementations.</span></p><ul><li><span>+++ pre-compiled applications can exploit plug-ins to support functionality that was not implemented.</span></li></ul></li><li><p><span>Calls from the client application into a shared or Dynamically Loaded library are generally handled through a table or vector of entry points</span></p></li></ul><p><strong><span>Process:</span></strong></p><ul><li><span>program choose and load that library into its address space</span></li><li><span>calls the supplied initialization entry point, app and DLL bind to each other</span></li><li><span>requests services from the DLL by making calls through the dynamically established vector of service entry points.</span></li><li><span>When doesn&#39;t need,  calls the shut-down method, and un-load.</span></li></ul><h3><a name="sl-vs-dll" class="md-header-anchor"></a><span>SL vs DLL</span></h3><ul><li><span>linkage-edit time, run time.</span></li><li><span>SL  consume memory for the entire time, DLL can unload.</span></li><li><span>SL impose numerous constraints and simple interfaces on the code. DLL can perform complex initialization and support complex (bi-directional) calls between the client application and library. </span></li><li><span>SL is indistinguishable from static library. DLL  require considerably more work (from the client application) to load the library, register the interfaces, and establish work sessions.</span></li><li><span>SL +++ efficiently binding libraries to client applications. DLL +++  extend the functionality of a client application</span></li></ul><h2><a name="4-stack-frames-and-linkage-conventions" class="md-header-anchor"></a><span>4 Stack Frames and Linkage Conventions</span></h2><h3><a name="stack" class="md-header-anchor"></a><span>Stack</span></h3><ul><li><span>Last-In-First-Out</span></li><li><span>自动化 automatically allocated &amp; automatically deallocated</span></li><li><span>封闭性 only visible to code within that procedure</span></li><li><span>^ Long lived resources in Heaps.</span></li></ul><h3><a name="subroutine-linkage-conventions" class="md-header-anchor"></a><span>Subroutine Linkage Conventions</span></h3><ul><li><p><span>ISA  specific.</span></p></li><li><p><span>subroutine linkage contains: </span></p><ul><li><span>parameter passing</span></li><li><span>subroutine call(save the return address)</span></li><li><span>register saving</span></li><li><span>allocating space for the local variables</span></li></ul></li></ul><h3><a name="traps-and-interrupts" class="md-header-anchor"></a><span>Traps and Interrupts</span></h3><h4><a name="procedure-vs-interrupts" class="md-header-anchor"></a><span>Procedure vs interrupts</span></h4><ul><li><span>Procedure expects function performed and returned value.</span></li><li><span>interrupts are initiated and defined by HW.</span></li><li><span>computer state should be restored after interrupts.</span></li></ul><h4><a name="interrupt-mechanism" class="md-header-anchor"></a><span>Interrupt mechanism</span></h4><ul><li><span>TRAP vector table: 连接对应的possible external interrupt/execution exception, Program Counter, 和Processor Status.</span></li><li><span>CPU在table里load新的PC/PS，并push到CPU stack，并继续新的PC指定位置的execution</span></li><li><span>First level handler save registers, and choose appropriate second level handler.</span></li><li><span>Second level handler deals with the event, and return to FLH, which restores registers, execute &#39;return&#39;, reload PC/PS, and resumes execution at the interruption.</span></li><li><strong><span>优点</span></strong><span>：translates HW-driven call to FLH (higher level language) -&gt; SLH.</span></li><li><span>缺点：user mode -&gt; processor mode, new address space(context switch), 会很慢，并loss of CPU caches.</span></li></ul><h2><a name="5-real-time-scheduling" class="md-header-anchor"></a><span>5 Real Time Scheduling</span></h2><h3><a name="real-time-system" class="md-header-anchor"></a><span>Real-Time System</span></h3><ul><li><span>Correctness depending on: Timeliness, predictability, feasibility, hard real-time, soft real-time.</span></li><li><span>Know the length of tasks.</span></li><li><span>Starvation of low prority task is OK.</span></li><li><span>Work-load be relatively fixed, to simultaneously achieve high utilization &amp; good response time(就像高速同时车流很大而不堵车)</span></li></ul><h3><a name="scheduling-algorithms" class="md-header-anchor"></a><span>Scheduling Algorithms</span></h3><h4><a name="no-scheduler-排队" class="md-header-anchor"></a><span>No scheduler: 排队</span></h4><h4><a name="static-schedulingfixed-schedule" class="md-header-anchor"></a><span>Static scheduling：fixed schedule</span></h4><h4><a name="dynamic-scheduling" class="md-header-anchor"></a><span>Dynamic scheduling</span></h4><h5><a name="preempty" class="md-header-anchor"></a><span>Preempty</span></h5><p><span>问题</span></p><ul><li><span>中断运行的task会miss ddl</span></li><li><span>task fixed, 没必要</span></li><li><span>infinite loop很少</span></li></ul><p>&nbsp;</p><h2><a name="6-garbage-collection-and-defragmentation" class="md-header-anchor"></a><span>6 Garbage Collection and Defragmentation </span></h2><h3><a name="garbage-collection" class="md-header-anchor"></a><span>Garbage Collection</span></h3><ul><li><span>seeking out no-longer-in-use resources and recycling</span></li><li><span>Commands: close(), free(), delete, return, exit.</span></li><li><span>共享资源时：Resouce manager: automatically free the object when the reference count reaches zero.</span></li><li><span>取消手动档：reference can be copied or deleted without notify the OS; 有些语言减少难度；太久没用自动删；记录allocation/release太多太费时。</span></li><li><span>方法：建一个list of existed resources, 从头到尾只要是reachable resource，就remove; 最后free所有还在list上的</span></li><li><span>缺点：电脑可能一直运行流畅直到突然中断来做GC</span></li></ul><h3><a name="defragmentation" class="md-header-anchor"></a><span>Defragmentation</span></h3><ul><li><span>reassigning and relocating previously allocated resources to eliminate external fragmentation</span></li><li><strong><span>Coalescing</span></strong><span> is only effective if adjacent memory chunks happen to be free at the same time.</span></li><li><span>In SSD, erasure can only be done in large(64MB) units. 所以先找到一块，把在用的4K blocks移到新的地方，再删这块并加入free list</span></li><li><span>Clean up the free space（像汉诺塔）：移出所有有用的block，清理，再把blocks放回去，达成连续，并不断重复。</span></li></ul><h2><a name="7-working-sets" class="md-header-anchor"></a><span>7 Working Sets</span></h2><ul><li><span>LRU成功原因：most programs exhibit some degree of temporal and spatial locality (Only for single program/process).</span></li><li><span>和Round-Robin互相排斥，因为RR runs periodic.</span></li><li><span>RR时采用per-process LRU。</span></li><li><span>Thrashing：The dramatic degradation in system performance associated with not having enough memory to efficiently run all of the ready processes。内存变少，Page fault变多。</span></li><li><span>working set size：增加number of page frames对表现没啥影响，而减少则可见的变差。</span></li><li><span>WS大小：不同process以及不同时候都不一样，可以根据page faults数量来观察：minimize page faults(overhead), maximize throughput(efficiency).</span></li></ul><h3><a name="implementation" class="md-header-anchor"></a><span>Implementation</span></h3><ul><li><span>类似Clock Algorithm：循环pages，如果最近被referenced，记下现在accumulated time，并标记为非referenced；如果没有，则算它的age，如果大于target age则return（否则小于就换算是thrashing）。</span></li><li><span>Age取决于accumulated CPU time，只有当ower运行并没有referencing它的时候才增加。</span></li><li><span>如果没有任何小于target age的，就too many process了。replace oldest或者减少process。</span></li></ul><h3><a name="dynamic-equilibrium-to-the-rescue" class="md-header-anchor"></a><span>Dynamic Equilibrium to the rescue</span></h3><ul><li><span>page stealing algorithm</span></li><li><span>Every process is continuously losing pages and stealing pages.</span></li><li><span>working set会根据reference page的多少和频率来变大变小。</span></li></ul><p>&nbsp;</p><h2><a name="8-inter-process-communication" class="md-header-anchor"></a><span>8 Inter-Process Communication</span></h2><h3><a name="process-interactions" class="md-header-anchor"></a><span>Process Interactions</span></h3><ul><li><p><strong><span>coordination of operations</span></strong><span> with other processes</span></p><ul><li><span>Synchronization: mutexes, condition variables</span></li><li><span>Signals exchange: kill</span></li><li><span>control operation: fork, wait, ptrace</span></li></ul></li><li><p><strong><span>data exchange</span></strong><span> between processes</span></p><ul><li><span>Uni-Directional streams</span></li><li><span>Bi-directional interactions</span></li></ul></li></ul><h3><a name="uni-directional-byte-streams" class="md-header-anchor"></a><span>Uni-Directional Byte Streams</span></h3><ul><li><p><span>program accepts a byte-stream input, and produces a byte-stream output (</span><strong><span>suitable input to the next</span></strong><span>), and works independently</span></p></li><li><p><span>byte streams are unstructured, 可被存进file再放入pipeline</span></p></li><li><p><span>Pipes are temporary files with a few special features -&gt; recognize the difference between a file and an inter-process data stream</span></p><ul><li><span>如果reader用尽了pipe的data，但还有open write file descripter, 这个reader就没得到EOF。要么reader blocked直到更多data来，要么writer blocked</span></li><li><span>Available buffering of pipe may be limited -&gt; </span><strong><span>FLOW CONTROL</span></strong><span>： 如果writer太快，就block writer直到reader追上来</span></li><li><span>如果给没有open read file descriptor的pipe写，则illegal并SIGPIPE</span></li><li><span>reader writer both closed, the file automatically deleted</span></li></ul></li><li><p><span>Pipeline -&gt; closed system, no authentication or encrypttion.</span></p></li></ul><h3><a name="named-pipes" class="md-header-anchor"></a><span>Named Pipes</span></h3><ul><li><span>A named pipe can be used as a </span><strong><span>rendezvous</span></strong><span> point for unrelated processes.</span></li><li><span>Readers and writers cannot authenticate each other</span></li><li><span>Writes from multiple writers may be intersperse，分不清bytes从哪里来</span></li><li><span>They do not enable clean fail-overs from a failed reader to its successor</span></li><li><span>All readers and writers must be running on the same node</span></li></ul><h3><a name="mailboxes" class="md-header-anchor"></a><span>Mailboxes</span></h3><ul><li><span>Each write is stored and delivered as a distinct message</span></li><li><span>Each write 伴随sender的authentication identification</span></li><li><span>Unprocessed messages remain in the mailbox after the death of a reader and can be retrieved by the next reader.</span></li><li><span>Still subject to single node/single operating system restrictions</span></li></ul><h3><a name="general-network-connections" class="md-header-anchor"></a><span>General Network Connections</span></h3><ul><li><span>Linux </span><strong><span>API:</span></strong><span> socket(IPC end-point + protocol + data model), bind(socket + local network address), connect, listen. accept, send, recv</span></li><li><span>options: byte streams over reliable connections (e.g. TCP) , best effort datagrams (e.g. UDP)</span></li><li><span>Higher level: Remote Procedure Calls, RESTful service models, Publish/Subscribe services</span></li><li><span>Complexities: Interoperablity, security, noeection and node failures, server address</span></li></ul><h3><a name="shared-memory" class="md-header-anchor"></a><span>Shared Memory</span></h3><ul><li><p><span>High performance of IPC = efficiency + trhoughput + latency</span></p></li><li><p><span>Best performance: not buffering, but Shared Memory:</span></p><ul><li><span>create a file -- each process maps the file into VAS(virtual address space) --  shared segment locked-down and never paged out -- process agree on data structures(eg. poll) in SS --anything written to SS will be immediately available.</span></li></ul></li><li><p><span>LIMITATION: Only for processes on same memory bus; a bug in one process can destroy the communication; No authentication of data from which process.</span></p></li></ul><h3><a name="network-conntection-and-out-of-band-signals" class="md-header-anchor"></a><span>Network Conntection and Out-of-Band Signals</span></h3><ul><li><span>Allow an important message to go directly to front of the line.</span></li><li><strong><span>Out-of-band</span></strong><span>: Sending a signal that could invoke a registered handler, and flush (without processing) all of the bufferred data -&gt; different channel from buffer, recipient was local</span></li><li><span>多信道：one heavily used channel for normal requests + another reserved for out-of-band requests。 Periodically polls the out-of-band channel -&gt; allow preempting queued operations.</span></li></ul><p>&nbsp;</p><h2><a name="9-user-mode-thread-implementation" class="md-header-anchor"></a><span>9 User-Mode Thread Implementation</span></h2><h3><a name="thread" class="md-header-anchor"></a><span>Thread</span></h3><ul><li><span>is an independently schedulable unit of execution. </span></li><li><span>runs within the address space of a process. </span></li><li><span>has access to all of the system resources owned by that process. </span></li><li><span>has its own general registers. </span></li><li><span>has its own stack (within the owning process&#39; address space).</span></li><li><span>a process is a container for an address space and resources. a thread is the unit of scheduled execution.</span></li></ul><h3><a name="simple-threads-library-user-mode" class="md-header-anchor"></a><span>Simple Threads Library (User Mode)</span></h3><ul><li><span>Create: allocate memory for thread-private stack from the heap, create thread descriptor with identification, scheduling, pointer to stack</span></li><li><span>Yield or Sleep: save general registers, remove from ready queue(sleep), select next thread on queue</span></li><li><span>Dispatch: restore saved registers and return to ready queue</span></li><li><span>Exit: free stack and descriptor</span></li><li><strong><span>Scheduling</span></strong><span>: SIGALARM as timer signals, can interrupt(yield) thread running too long.</span></li><li><span>Sigprocmask: temporarily block signals</span></li></ul><h3><a name="kernel-implemented-threads" class="md-header-anchor"></a><span>Kernel implemented threads</span></h3><p><span>Solves the following problems:</span></p><ul><li><span>when a thread blocks, all threads(within that process) stop executing. OS cannot know thrds</span></li><li><span>OS cannot execute threads in parallel on multiple cores if OS not aware of multiple thrds.</span></li><li><span>futex(7) approach: uses an atomic instruction to attempt to get a lock in user-mode, call OS if failed.</span></li></ul><h3><a name="performance" class="md-header-anchor"></a><span>Performance</span></h3><ul><li><strong><span>Light weight thread</span></strong><span>: non-preenptive scheduling下user-mode更快，不用context switch</span></li><li><span>Multi-processor下kernel-mode更快，加大throughput大于损失的context switch</span></li></ul><p>&nbsp;</p><h2><a name="10-deadlock-avoidance" class="md-header-anchor"></a><span>10 Deadlock Avoidance</span></h2><ul><li><p><span>不能避免的情况：</span></p><ul><li><span>mutual exclusion is fundamental. </span></li><li><span>hold and block are inevitable. </span></li><li><span>preemption is unacceptable. </span></li><li><span>the resource dependency networks are imponderable.</span></li></ul></li><li><p><span>Deadlock例子：</span></p><ul><li><span>main memory is exhausted. </span></li><li><span>we need to swap some processes out to secondary storage to free up memory. </span></li><li><span>swapping processes out involves the creation of new I/O requests descriptors, which must be allocated from main memory.</span></li><li><span>some process will free up resources when it completes, but the process needs more resources in order to complete.</span></li></ul></li><li><p><strong><span>Deadlock Avoidance</span></strong><span>: keep track of free resources, and refuse to grant requests that would put the system into a dangerously resource-depleted state</span></p></li></ul><h3><a name="reservations" class="md-header-anchor"></a><span>Reservations</span></h3><ul><li><span>运行中拒绝requests不好handle，所以ask processes to reserve resources before actually need them.</span></li><li><strong><span>sbrk</span></strong><span>: 没有allocate更多memory，而是让OS改变data segment的大小in VAS。直到refer新pages才allocate.</span></li><li><span>如果能确定在over-tex memory，就可以抛出error来deal，而不是真正运行时kill process</span></li><li><span>类似情况reservation：闪存少-&gt;refuse create new file, thrashing -&gt; refuse new process, network traffic saturate agreement -&gt; refuse crease or bind socket</span></li></ul><h3><a name="over-booking" class="md-header-anchor"></a><span>Over-Booking</span></h3><ul><li><span>Grant more reservations than actually resources we have -&gt; </span><strong><span>Relative-safe</span></strong></li><li><span>情况：airlines; network brandwidth handle 125% traffic and maintain 99% performance</span></li><li><span>kill random process太可怕，所以OS一般under-book(10%)</span></li></ul><h3><a name="dealing-with-rejection" class="md-header-anchor"></a><span>Dealing with Rejection</span></h3><p><span>failed with clean error -&gt; process can try to manage in the most graceful way:</span></p><ul><li><span>A </span><strong><span>simple</span></strong><span> program might log an error message and exit. </span></li><li><span>A </span><strong><span>stubborn</span></strong><span> program might continue retrying the request (in hope tht the problem is transient). </span></li><li><span>A </span><strong><span>more robust</span></strong><span> program might return errors for requsts that cannot be processed (for want of resources), but continue trying to serve new requests (in the hope that the problem is transient). </span></li><li><span>A </span><strong><span>more civic-minded</span></strong><span> program might attempt to reduce its resource use (and therefore the number of requests it can serve).</span></li></ul><p>&nbsp;</p><h3><a name="11-health-monitoring-and-recovery" class="md-header-anchor"></a><span>11 Health Monitoring and Recovery</span></h3><p>&nbsp;</p><p>&nbsp;</p><h2><a name="lec-1" class="md-header-anchor"></a><span>Lec 1</span></h2><h3><a name="operating-system" class="md-header-anchor"></a><span>Operating System</span></h3><h4><a name="what-it-does" class="md-header-anchor"></a><span>What it does</span></h4><ul><li><span>Manage hardware for programs</span></li><li><span>abstracts the hardware (work directly with HW)</span></li><li><span>provides new abstractions for applications (via abstractions)</span></li><li><span>constrained by many non-technical factors</span></li></ul><p><span>Applcations SW --binary interface--&gt; system services/libraries --system call--&gt; OS  --privileged inst--&gt; HW</span></p><h3><a name="instruction-set-architeturesisas" class="md-header-anchor"></a><span>Instruction Set Architetures(ISAs)</span></h3><p><span>privileged vs general</span></p><ul><li><span>any code can execute gerneral</span></li><li><span>processor must be in a special mode to execute privileged</span></li></ul><h3><a name="types-of-os-resources" class="md-header-anchor"></a><span>Types of OS Resources</span></h3><h4><a name="serially-reusable-resources-轮流用" class="md-header-anchor"></a><span>Serially reusable resources 轮流用</span></h4><ul><li><span>one at a time</span></li><li><span>access control, exclusive use</span></li><li><span>graceful transitions</span></li></ul><h4><a name="partitionable-resoures-有限共享" class="md-header-anchor"></a><span>Partitionable resoures 有限共享</span></h4><ul><li><p><span>access control</span></p><ul><li><span>Containment</span></li><li><span>Privacy</span></li></ul></li><li><p><span>graceful transitions (not permanently allocated)</span></p></li></ul><h4><a name="sharable-resources-无限共享" class="md-header-anchor"></a><span>Sharable resources 无限共享</span></h4><ul><li><span>don&#39;t wait or own</span></li><li><span>invlove limitless resources</span></li></ul><h2><a name="lec-2" class="md-header-anchor"></a><span>Lec 2</span></h2><h3><a name="abstractions" class="md-header-anchor"></a><span>Abstractions</span></h3><ul><li><p><span>CPU/Memory abstractions</span></p><ul><li><span>Process, thread, virtual machines</span></li><li><span>Virtual address apaces, shared segments</span></li></ul></li><li><p><span>Persistent storage abstractions</span></p><ul><li><span>Files and file systems</span></li></ul></li><li><p><span>I/O abstractions</span></p><ul><li><span>Virtual terminal sessions, windows</span></li><li><span>Sockets, pipes, VPNs, signals (as interrupts)</span></li></ul></li></ul><h3><a name="services-higher-level-abstractions" class="md-header-anchor"></a><span>Services: Higher level abstractions</span></h3><h4><a name="分类" class="md-header-anchor"></a><span>分类</span></h4><ul><li><span>Cooperating parallel processes</span></li><li><span>Security</span></li><li><span>User interface</span></li></ul><h4><a name="性质" class="md-header-anchor"></a><span>性质</span></h4><ul><li><span>not directly visible</span></li><li><span>Enclosure management</span></li><li><span>Software updates, configuration registry</span></li><li><span>Dynamic resource allocation and scheduling</span></li><li><span>Networks, protocols, domain services</span></li></ul><h4><a name="方法" class="md-header-anchor"></a><span>方法</span></h4><p><span>Applications do: (each in different layers)</span></p><ul><li><h4><a name="call-subroutines-functions---other-program" class="md-header-anchor"></a><span>call subroutines (functions -&gt; other program)</span></h4><ul><li><span>jump, return values in registers on the stack</span></li><li><span>√ Fast, run-time binding</span></li><li><span>^ all services in same address space</span></li><li><span>^ limited ability to combine different languages</span></li><li><span>^ cannot usually use privieged inst (diff programs have diff limited address space(?))</span></li></ul></li><li><h4><a name="via-libraries" class="md-header-anchor"></a><span>via libraries</span></h4><ul><li><span>one subroutine delivery approach</span></li><li><span>a library is a collection of object modules(a single file)</span></li><li><span>√ standard utility</span></li></ul></li><li><h4><a name="make-system-calls" class="md-header-anchor"></a><span>make system calls</span></h4><ul><li><span>force an entry into OS</span></li><li><span>√ able to allocate/use new/privileged resources</span></li><li><span>√ able to share/communicate with other processes</span></li><li><span>^ implemented on local node</span></li><li><span>^ much slower than subroutine calls</span></li></ul></li><li><h4><a name="via-kernel" class="md-header-anchor"></a><span>via Kernel</span></h4><ul><li><p><span>主要是functions require privilege</span></p><ul><li><span>Privilege instr (interrupt, IO)</span></li><li><span>allocate physic resource (memory)</span></li><li><span>ensuring privacy and containment</span></li><li><span>ensuring integrity of critical resource</span></li></ul></li><li><p><span>operation may be out-sourced (?)</span></p></li><li><p><span>plugins may be less trusted</span></p></li></ul></li><li><h4><a name="outside-kernel" class="md-header-anchor"></a><span>Outside Kernel</span></h4><ul><li><span>Not all trusted code must be in the kernel</span></li><li><span>Some are actually somewhat privileged process</span></li><li><span>some are merely trusted</span></li></ul></li><li><h4><a name="send-messages-to-sw-to-perform-the-services" class="md-header-anchor"></a><span>send messages to SW to perform the services</span></h4><ul><li><span>exchange messages with a server(via sys calls)</span></li><li><span>√ Server can be  anywhere on earch</span></li><li><span>√ sevice highly scalable and available</span></li><li><span>√ user-mode code ok</span></li><li><span>^ 1000x slower than subroutine</span></li><li><span>Limited ability to operate on process resources</span></li></ul></li><li><h4><a name="via-middleware" class="md-header-anchor"></a><span>via Middleware</span></h4><ul><li><span>SW is key part of application or service platform, but not of OS</span></li><li><span>Kernel code is expensive and dangerous</span></li><li><span>User mode is easy to build, test, debug. portable, crash and restarted</span></li></ul></li></ul><h3><a name="library" class="md-header-anchor"></a><span>Library</span></h3><h4><a name="static" class="md-header-anchor"></a><span>Static</span></h4><ul><li><span>include in load module at link time</span></li><li><span>each load module has its own copy of each library</span></li><li><span>must relink to incorporate new library</span></li></ul><h4><a name="shared" class="md-header-anchor"></a><span>Shared</span></h4><ul><li><span>map into address space at exec time (linker needs to know where the library is)</span></li><li><span>One in-memory copy, shared by all processes</span></li><li><span>OS loads library along with program(运行程序时才加载library)</span></li><li><span>√ save memory</span></li><li><span>√ faster program start-up (如果已经在memory里，不用再次加载）</span></li><li><span>√ simplified  updates</span></li><li><span>^ cannot include global data storage</span></li><li><span>^ added into program memory (不管需不需要）</span></li><li><span>^ called routines must by known at compile-time (只是把load延迟到运行时间而已）</span></li><li><span>^ Dynamically loadable libraries are more general</span></li></ul><h4><a name="dynamic" class="md-header-anchor"></a><span>Dynamic</span></h4><ul><li><span>choose and load at run-time</span></li><li><span>Load only the library functions are called, 方法只在被调用时才load</span></li></ul><h3><a name="api-application-program-interfaces" class="md-header-anchor"></a><span>API (Application Program Interfaces)</span></h3><ul><li><span>A source level interface</span></li><li><span>An API compliant program will compile &amp; run on any compliant system (for programmer)</span></li><li><span>Normal libraries(shared and otherwise) and DLL are accessed through API</span></li></ul><h3><a name="abi-applcation-binary-interfaces" class="md-header-anchor"></a><span>ABI (Applcation Binary Interfaces)</span></h3><ul><li><span>A binary interface, specifying dynamically loadable libraries(DLL), data formats, calling sequences, linkage conventions</span></li><li><span>the binding of an API to a HW architecture(ISA)</span></li><li><span>An ABI compliant program will run(unmodified) on any compliant system (for users)</span></li><li><span>The dynamic loading mechanism is ABI-specific</span></li></ul><h2><a name="lec-3" class="md-header-anchor"></a><span>Lec 3</span></h2><h3><a name="process" class="md-header-anchor"></a><span>Process</span></h3><ul><li><span>Characterized by its properties (state) &amp; operations.</span></li></ul><h4><a name="state" class="md-header-anchor"></a><span>State</span></h4><ul><li><p><span>A mode or condition of being</span></p><ul><li><span>Scheduling priority of a process </span></li><li><span>Current pointer into a file </span></li><li><span>Completion condition of an I/O operation </span></li><li><span>List of memory pages allocated to a process </span></li></ul></li></ul><h4><a name="process-address-space" class="md-header-anchor"></a><span>Process address space</span></h4><ul><li><span>A process’ address space is made up of all memory locations that the process can address.</span></li><li><span>code + data + stack.</span></li></ul><h4><a name="code-segment" class="md-header-anchor"></a><span>Code segment</span></h4><ul><li><span>Code must be loaded into memory.</span></li><li><span>Code segments are read/execute only and sharable.</span></li></ul><h4><a name="data-segment" class="md-header-anchor"></a><span>Data segment</span></h4><ul><li><span>must be initialized in address space</span></li><li><span>read/write, and process private</span></li><li><span>can grow/shrink (sbrk())</span></li></ul><h4><a name="stack-segment" class="md-header-anchor"></a><span>Stack segment</span></h4><ul><li><span>Each procedure call allocates a new stack frame</span></li><li><span>Size of stack depends on program activities</span></li><li><span>OS manages the process’ stack segment</span></li><li><span>read/write and process private</span></li></ul><h4><a name="process-descriptor" class="md-header-anchor"></a><span>Process descriptor</span></h4><ul><li><p><span>Stores all information relevant to the process</span></p><ul><li><span>State to restore (ID, state, pointer, priority ...)</span></li><li><span>References to allocated resources </span></li><li><span>Information to support process operations</span></li></ul></li></ul><h4><a name="other-process-state--not-in-pd" class="md-header-anchor"></a><span>other process state ( not in PD)</span></h4><ul><li><p><span>on the stack &amp; in registers</span></p></li><li><p><span>linux has supervisor-mode stack.</span></p><ul><li><span>retain the state of in-progress system calls </span></li><li><span>save the state of an interrupt preempted process</span></li></ul></li></ul><h2><a name="lec-4" class="md-header-anchor"></a><span>Lec 4</span></h2><h3><a name="scheduling" class="md-header-anchor"></a><span>Scheduling</span></h3><ul><li><span>GOALS: throughput(operations/second), average time-to-completion, fairness, priority, real-time deadline, response time</span></li><li><span>Preempty vs non-preempty</span></li><li><span>graceful degradation: degraded performance / rejecting work.</span></li><li><span>Hard &amp; soft ddl</span></li><li><span>clock interrupt: ensure that runaway process doesn&#39;t keep control forever. -&gt; preemptive scheduling</span></li><li><span>starvation</span></li><li><span>Hard &amp; soft priority</span></li></ul><p>&nbsp;</p></div>
+</body>
+</html>
