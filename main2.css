@@ -363,8 +363,8 @@ b{
 .html5       { width:90%;  -moz-animation:html5 5s ease-out;       -webkit-animation:html5 5s ease-out;       }
 .css3        { width:70%;  -moz-animation:css3 3s ease-out;        -webkit-animation:css3 3s ease-out;        }
 .jquery      { width:80%;  -moz-animation:jquery 3s ease-out;      -webkit-animation:jquery 3s ease-out;      }
-.photoshop   { width:50%;  -moz-animation:photoshop 4s ease-out;   -webkit-animation:photoshop 4s ease-out;   }
-.dreamweaver { width:60%; -moz-animation:dreamweaver 4s ease-out; -webkit-animation:dreamweaver 4s ease-out; }
+.photoshop   { width:75%;  -moz-animation:photoshop 4s ease-out;   -webkit-animation:photoshop 4s ease-out;   }
+.dreamweaver { width:70%; -moz-animation:dreamweaver 4s ease-out; -webkit-animation:dreamweaver 4s ease-out; }
 
 /*@-moz-keyframes html5       { 0%  { width:0px;} 100%{ width:90%;}  }*/
 /*@-moz-keyframes css3        { 0%  { width:0px;} 100%{ width:70%;}  }*/
@@ -375,14 +375,14 @@ b{
 @-webkit-keyframes html5       { 0%  { width:0px;} 100%{ width:90%;}  }
 @-webkit-keyframes css3        { 0%  { width:0px;} 100%{ width:70%;}  }
 @-webkit-keyframes jquery      { 0%  { width:0px;} 100%{ width:80%;}  }
-@-webkit-keyframes photoshop   { 0%  { width:0px;} 100%{ width:50%;}  }
-@-webkit-keyframes dreamweaver { 0%  { width:0px;} 100%{ width:60%;} }
+@-webkit-keyframes photoshop   { 0%  { width:0px;} 100%{ width:75%;}  }
+@-webkit-keyframes dreamweaver { 0%  { width:0px;} 100%{ width:70%;} }
 
-.s1       { width:80%;  -moz-animation:s1 5s ease-out;       -webkit-animation:s1 5s ease-out;       }
+.s1       { width:85%;  -moz-animation:s1 5s ease-out;       -webkit-animation:s1 5s ease-out;       }
 .s2        { width:50%;  -moz-animation:s2 3s ease-out;        -webkit-animation:s2 3s ease-out;        }
-.s3      { width:40%;  -moz-animation:s3 3s ease-out;      -webkit-animation:s3 3s ease-out;      }
-.s4   { width:75%;  -moz-animation:s4 4s ease-out;   -webkit-animation:s4 4s ease-out;   }
-.s5 { width:70%; -moz-animation:s5 4s ease-out; -webkit-animation:s5 4s ease-out; }
+.s3      { width:70%;  -moz-animation:s3 3s ease-out;      -webkit-animation:s3 3s ease-out;      }
+.s4   { width:50%;  -moz-animation:s4 4s ease-out;   -webkit-animation:s4 4s ease-out;   }
+.s5 { width:40%; -moz-animation:s5 4s ease-out; -webkit-animation:s5 4s ease-out; }
 
 /*@-moz-keyframes s1       { 0%  { width:0px;} 100%{ width:90%;}  }*/
 /*@-moz-keyframes s2        { 0%  { width:0px;} 100%{ width:70%;}  }*/
@@ -390,11 +390,11 @@ b{
 /*@-moz-keyframes s4   { 0%  { width:0px;} 100%{ width:80%;}  }*/
 /*@-moz-keyframes s5 { 0%  { width:0px;} 100%{ width:40%;} }*/
 
-@-webkit-keyframes s1       { 0%  { width:0px;} 100%{ width:80%;}  }
+@-webkit-keyframes s1       { 0%  { width:0px;} 100%{ width:85%;}  }
 @-webkit-keyframes s2        { 0%  { width:0px;} 100%{ width:50%;}  }
-@-webkit-keyframes s3      { 0%  { width:0px;} 100%{ width:40%;}  }
-@-webkit-keyframes s4   { 0%  { width:0px;} 100%{ width:75%;}  }
-@-webkit-keyframes s5 { 0%  { width:0px;} 100%{ width:70%;} }
+@-webkit-keyframes s3      { 0%  { width:0px;} 100%{ width:70%;}  }
+@-webkit-keyframes s4   { 0%  { width:0px;} 100%{ width:50%;}  }
+@-webkit-keyframes s5 { 0%  { width:0px;} 100%{ width:40%;} }
 
 
 .switch{
