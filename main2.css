@@ -472,6 +472,14 @@ input.cmn-toggle-round-flat:checked + label:after {
   box-shadow: 0px 16px 26px 0px rgba(0,0,0,0.5);
 }
 
+@media screen and (max-width: 1200px){
+  #bili{
+    width: 630px;
+    height: 400px;
+    transform: translateX(-320px);
+  }
+}
+
 #bili-img-div{
   margin-top: 3vh;
   text-align: center;
