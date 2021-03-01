@@ -90,7 +90,7 @@ function opt(){
     }
     else if (j<=15){
         direction = 1;
-        let backs = ['images/back2.JPG', 'images/back3.jpg', 'images/back5.JPG', 'images/back6.JPG'
+        let backs = ['images/back2.JPG', 'images/back3.jpg', 'images/back6.JPG'
                     , 'images/back7.JPG', 'images/back8.JPG', 'images/back9.jpg'];
         i = (i+1)%backs.length;
         $("#background").attr('src', backs[i]);
